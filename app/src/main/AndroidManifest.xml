@@ -18,7 +18,7 @@
         <activity android:name=".HelpActivity" />
         <activity android:name=".AanmakenActivity" />
         <activity android:name=".DeelnemenActivity" />
-        <activity android:name=".ResultatenActivity"></activity>
+        <activity android:name=".ResultatenActivity" />
     </application>
 
 </manifest>

@@ -25,7 +25,8 @@
         android:id="@+id/btnAanmakenSessie"
         android:layout_marginTop="32dp"
         android:layout_below="@+id/txtWelkom"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="aanmakenSessie" />
 
     <Button
         android:layout_width="match_parent"
@@ -33,7 +34,8 @@
         android:text="Deelnemen sessie"
         android:id="@+id/btnDeelnemenSessie"
         android:layout_below="@+id/btnAanmakenSessie"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="deelnemenSessie" />
 
     <Button
         android:layout_width="match_parent"
@@ -41,7 +43,8 @@
         android:text="Bekijken resultaten"
         android:id="@+id/btnBekijkenResultaten"
         android:layout_below="@+id/btnDeelnemenSessie"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="resultaten" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -37,4 +37,19 @@ public class MainActivity extends AppCompatActivity {
                 return true;
         }
     }
+
+    public void aanmakenSessie(View view) {
+        Intent intent = new Intent(MainActivity.this, AanmakenActivity.class);
+        startActivity(intent);
+    }
+
+    public void deelnemenSessie(View view) {
+        Intent intent = new Intent(MainActivity.this, DeelnemenActivity.class);
+        startActivity(intent);
+    }
+
+    public void resultaten(View view) {
+        Intent intent = new Intent(MainActivity.this, ResultatenActivity.class);
+        startActivity(intent);
+    }
 }
