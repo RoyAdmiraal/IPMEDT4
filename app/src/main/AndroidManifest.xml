@@ -15,7 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HelpActivity"/>
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".AanmakenActivity" />
+        <activity android:name=".DeelnemenActivity" />
+        <activity android:name=".ResultatenActivity"></activity>
     </application>
 
 </manifest>
