@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">planningPoker</string>
+    <string name="app_name">Planning Poker</string>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="help">
+        Nieuwe sessie uitleg
+        \n\n
+        Deelnemen Sessie uitleg
+        \n\n
+        Spelregels
+        \n\n
+        Resutaten bekijken uitleg
+    </string>
 </resources>
