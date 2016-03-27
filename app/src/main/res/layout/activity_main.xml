@@ -12,5 +12,42 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welkom bij de Planning Poker app!" />
+        android:text="Welkom bij de Planning Poker app!"
+        android:layout_marginTop="125dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txtWelkom" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aanmaken sessie"
+        android:id="@+id/btnAanmakenSessie"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/txtWelkom"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deelnemen sessie"
+        android:id="@+id/btnDeelnemenSessie"
+        android:layout_below="@+id/btnAanmakenSessie"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bekijken resultaten"
+        android:id="@+id/btnBekijkenResultaten"
+        android:layout_below="@+id/btnDeelnemenSessie"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copyright © Groep A"
+        android:id="@+id/txtCopyright"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
