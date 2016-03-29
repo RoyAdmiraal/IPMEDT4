@@ -52,4 +52,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, ResultatenActivity.class);
         startActivity(intent);
     }
+
 }

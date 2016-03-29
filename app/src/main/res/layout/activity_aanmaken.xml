@@ -9,4 +9,45 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.royadmiraal.planningpoker.AanmakenActivity">
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Uw naam"
+        android:ems="10"
+        android:id="@+id/invoerNaam"
+        android:layout_above="@+id/sessieNaam"
+        android:layout_alignLeft="@+id/sessieNaam"
+        android:layout_alignStart="@+id/sessieNaam" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Naam sessie"
+        android:ems="10"
+        android:id="@+id/sessieNaam"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copyright © Groep A"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFA726"
+        android:text="Doorgaan"
+        android:id="@+id/doorgaanButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="doorgaanSessieEigenschappen"
+        android:layout_marginBottom="79dp" />
+
+
 </RelativeLayout>
