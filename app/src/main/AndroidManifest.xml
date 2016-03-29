@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".HelpActivity" />
         <activity android:name=".AanmakenActivity" />
+        <activity android:name=".SessieEigenschappenActivity"/>
         <activity android:name=".DeelnemenActivity" />
         <activity android:name=".ResultatenActivity" />
     </application>
