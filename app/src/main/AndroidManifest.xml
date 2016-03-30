@@ -17,9 +17,12 @@
         </activity>
         <activity android:name=".HelpActivity" />
         <activity android:name=".AanmakenActivity" />
-        <activity android:name=".SessieEigenschappenActivity"/>
+        <activity android:name=".SessieEigenschappenActivity" />
         <activity android:name=".DeelnemenActivity" />
-        <activity android:name=".ResultatenActivity" />
+        <activity
+            android:name=".ResultatenActivity"
+            android:label="@string/title_activity_resultaten"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
