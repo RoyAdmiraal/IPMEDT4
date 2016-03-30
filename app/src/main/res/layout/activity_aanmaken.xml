@@ -41,7 +41,6 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFA726"
         android:text="Doorgaan"
         android:id="@+id/doorgaanButton"
         android:layout_alignParentBottom="true"

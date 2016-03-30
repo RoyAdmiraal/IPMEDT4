@@ -19,7 +19,7 @@
         android:id="@+id/txtWelkom" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Aanmaken sessie"
         android:id="@+id/btnAanmakenSessie"
@@ -29,7 +29,7 @@
         android:onClick="aanmakenSessie" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Deelnemen sessie"
         android:id="@+id/btnDeelnemenSessie"
@@ -38,7 +38,7 @@
         android:onClick="deelnemenSessie" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bekijken resultaten"
         android:id="@+id/btnBekijkenResultaten"
