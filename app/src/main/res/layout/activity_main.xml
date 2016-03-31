@@ -22,6 +22,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
         android:text="Welkom bij de Planning Poker app!"
         android:layout_marginTop="190dp"
         android:id="@+id/txtWelkom"
@@ -30,7 +31,7 @@
 
     <Button
         style="@style/Button"
-        android:layout_width="wrap_content"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:text="Aanmaken sessie"
         android:id="@+id/btnAanmakenSessie"
@@ -40,7 +41,7 @@
 
     <Button
         style="@style/Button"
-        android:layout_width="wrap_content"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:text="Deelnemen sessie"
         android:id="@+id/btnDeelnemenSessie"
@@ -50,7 +51,7 @@
 
     <Button
         style="@style/Button"
-        android:layout_width="wrap_content"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:text="Bekijken resultaten"
         android:id="@+id/btnBekijkenResultaten"

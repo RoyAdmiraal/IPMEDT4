@@ -53,17 +53,7 @@ public class ResultatenActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
             }
-        });
-
-    }
 
 
     @Override
@@ -118,7 +108,7 @@ public class ResultatenActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_resultaten, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            textView.setText("TEST");
             return rootView;
         }
     }
@@ -150,11 +140,11 @@ public class ResultatenActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Sessie 1";
                 case 1:
-                    return "SECTION 2";
+                    return "Sessie 2";
                 case 2:
-                    return "SECTION 3";
+                    return "Sessie 3";
             }
             return null;
         }
