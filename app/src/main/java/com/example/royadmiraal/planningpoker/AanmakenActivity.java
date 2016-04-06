@@ -8,15 +8,25 @@ import android.widget.Button;
 
 public class AanmakenActivity extends AppCompatActivity {
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                setContentView(R.layout.activity_aanmaken);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_aanmaken);
+        createUser();
+        createSessie();
+    }
 
-        }
-        public void doorgaanSessieEigenschappen(View view) {
-                Intent intent = new Intent(AanmakenActivity.this, SessieEigenschappenActivity.class);
-                startActivity(intent);
-        }
+    private void createSessie() {
+        //aanmaken in database dmv api
+
+        // object mee geven aan sessie eigenschappen
+    }
+
+    public void doorgaanSessieEigenschappen(View view) {
+        Intent intent = new Intent(AanmakenActivity.this, SessieEigenschappenActivity.class);
+        startActivity(intent);
+    }
+
+
 }
 
