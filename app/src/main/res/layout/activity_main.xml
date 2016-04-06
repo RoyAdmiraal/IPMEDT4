@@ -9,27 +9,39 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.royadmiraal.planningpoker.MainActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/planningpokerlogo"
+        android:layout_alignBottom="@+id/txtWelkom"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="53dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
         android:text="Welkom bij de Planning Poker app!"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="190dp"
+        android:id="@+id/txtWelkom"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/txtWelkom" />
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        style="@style/Button"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:text="Aanmaken sessie"
         android:id="@+id/btnAanmakenSessie"
-        android:layout_marginTop="32dp"
+        android:onClick="aanmakenSessie"
         android:layout_below="@+id/txtWelkom"
-        android:layout_centerHorizontal="true"
-        android:onClick="aanmakenSessie" />
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        style="@style/Button"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:text="Deelnemen sessie"
         android:id="@+id/btnDeelnemenSessie"
@@ -38,7 +50,8 @@
         android:onClick="deelnemenSessie" />
 
     <Button
-        android:layout_width="wrap_content"
+        style="@style/Button"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:text="Bekijken resultaten"
         android:id="@+id/btnBekijkenResultaten"
@@ -53,4 +66,6 @@
         android:id="@+id/txtCopyright"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+
 </RelativeLayout>
