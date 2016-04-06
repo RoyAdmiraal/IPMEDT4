@@ -38,6 +38,8 @@
         android:id="@+id/doorgaanButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:onClick="deelnemenSpeelveld"
+
         android:layout_marginBottom="74dp" />
 
     <TextView

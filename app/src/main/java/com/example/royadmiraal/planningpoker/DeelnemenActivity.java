@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class DeelnemenActivity extends AppCompatActivity {
 
@@ -18,6 +19,11 @@ public class DeelnemenActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
+    }
+
+    public void deelnemenSpeelveld(View view) {
+        Intent intent = new Intent(DeelnemenActivity.this, SpeelveldActivity.class);
+        startActivity(intent);
     }
 
     @Override
