@@ -21,7 +21,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:height">36dp</item>
         <item name="android:textColor">#ffffff</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">14dp</item>
         <item name="android:background">#3399cc</item>
         <item name="android:gravity">center</item>
         <item name="android:paddingLeft">16dp</item>
@@ -30,6 +30,20 @@
         <item name="android:paddingBottom">0dp</item>
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:layout_marginTop">8dp</item>
+    </style>
+    <style name="toolbarStyle">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="kaart">
+        <item name="android:layout_width">52dp</item>
+        <item name="android:layout_height">84.5dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+
+
+
+
     </style>
 
 </resources>

@@ -26,6 +26,11 @@ public class DeelnemenActivity extends AppCompatActivity {
         return true;
     }
 
+    public void deelnemenSpeelveld(View view) {
+        Intent intent = new Intent(DeelnemenActivity.this, SpeelveldActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection

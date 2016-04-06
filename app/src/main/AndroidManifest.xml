@@ -18,16 +18,23 @@
             </intent-filter>
         </activity>
         <activity android:name=".HelpActivity" />
-        <activity android:name=".AanmakenActivity" />
+        <activity
+            android:name=".AanmakenActivity"
+            android:label="@string/title_activity_aanmaken"/>
         <activity android:name=".SessieEigenschappenActivity" />
-        <activity android:name=".DeelnemenActivity" />
-
+        <activity
+            android:name=".DeelnemenActivity"
+            android:label="@string/title_activity_deelnemen"/>
         <activity
             android:name=".ResultatenActivity"
             android:label="@string/title_activity_resultaten"
             android:theme="@style/AppTheme.NoActionBar">
 		</activity>
-		<activity android:name=".SpeelveldActivity"/>
-    </application>
 
+			
+        <activity
+            android:name=".SpeelveldActivity"
+            android:label="@string/title_activity_deelnemenSpeelveld">
+        </activity>
+    </application>
 </manifest>
