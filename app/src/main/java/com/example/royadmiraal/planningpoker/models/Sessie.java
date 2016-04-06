@@ -5,7 +5,7 @@ package com.example.royadmiraal.planningpoker.models;
  */
 public class Sessie {
     private int id;
-    private boolean isClosed = Fa
+    //private boolean isClosed = Fa
 
     public Sessie() {
 
