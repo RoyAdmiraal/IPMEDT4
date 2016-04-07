@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:weightSum="1"
-    android:background="@color/colorPrimary">
+    android:background="#81c0e0">
 
 
 
@@ -225,5 +225,13 @@
         android:layout_gravity="bottom"
         android:layout_below="@+id/opleggenKaartButton2"
         android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/scrumbutton"
+        android:src="@drawable/scrumbutton"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="222dp"/>
 </RelativeLayout>
 
