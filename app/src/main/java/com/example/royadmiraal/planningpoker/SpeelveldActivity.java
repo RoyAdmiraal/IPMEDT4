@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Arrays;
 
 
 /**
@@ -18,7 +19,8 @@ import android.widget.TextView;
  */
 public class SpeelveldActivity extends AppCompatActivity {
 
-    //int [] kaartenLijst;
+    String []  deelneemGegevens = {"naam","Sessie id"};
+    String []  spelerLijst = {"speler 1","Speler 2", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", "Speler 8"};
     ImageView plek1, plek2, plek3, plek4, plek5, plek6, plek7, plek8;
     int kaartNummer = 13;
 
@@ -39,16 +41,24 @@ public class SpeelveldActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_speelveld);
+        Intent intent = getIntent();
+        deelneemGegevens = intent.getStringArrayExtra("strings");
+        spelerLijst[1] = deelneemGegevens[0];
 
        createSpeelveld();
 
     }
+    public void naamNaarDatabase(){
+
+    }
     public void createSpeelveld(){
+
+
 
         Button opleggenKaart = (Button) findViewById(R.id.opleggenKaartButton);
 
         plek1 = (ImageView) findViewById(R.id.plek1);
-        plek2 = (ImageView) findViewById(R.id.plek2); 
+        plek2 = (ImageView) findViewById(R.id.plek2);
         plek3 = (ImageView) findViewById(R.id.plek3);
         plek4 = (ImageView) findViewById(R.id.plek4);
         plek5 = (ImageView) findViewById(R.id.plek5);
@@ -96,7 +106,7 @@ public class SpeelveldActivity extends AppCompatActivity {
         TextView spelerNaam8 = (TextView) findViewById(R.id.spelerNaam8);
 
 
-        String spelerLijst[] = {"Speler 1", "Speler 2", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", "Speler 8"};
+
 
         String print = "";
         for (String s : spelerLijst) {
