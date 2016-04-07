@@ -28,10 +28,8 @@
         <activity
             android:name=".ResultatenActivity"
             android:label="@string/title_activity_resultaten"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/MyMaterialTheme.Base">
 		</activity>
-
-			
         <activity
             android:name=".SpeelveldActivity"
             android:label="@string/title_activity_deelnemenSpeelveld">
