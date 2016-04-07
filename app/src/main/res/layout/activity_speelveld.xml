@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:weightSum="1"
@@ -13,7 +13,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:columnCount="7"
-    android:rowCount="5"
+    android:rowCount="12"
     android:orientation="horizontal"
     tools:context="com.example.royadmiraal.planningpoker.SpeelveldActivity"
     android:layout_marginTop="150dp"
@@ -196,17 +196,34 @@
         android:layout_marginBottom="10dp"
         android:layout_marginTop="-10dp" />
 
-</GridLayout>
 
-    <Button
-        android:layout_width="92dp"
+</GridLayout>
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kaart opleggen"
+        android:text="Hier komt de taak te staan"
+        android:id="@+id/taakOmschrijving"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/opleggenKaartButton"
+        android:layout_alignEnd="@+id/opleggenKaartButton"
+        android:layout_marginTop="56dp" />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Kaart kiezen"
+        android:id="@+id/opleggenKaartButton2"
+        android:onClick="opleggen1"
+        android:layout_gravity="bottom"
+        android:layout_below="@+id/GridLayout1"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Standaartkaart"
         android:id="@+id/opleggenKaartButton"
         android:onClick="opleggen"
-        android:layout_marginRight="500dp"
-        android:gravity="center_horizontal"
-        android:layout_gravity="bottom" />
-
-</LinearLayout>
+        android:layout_gravity="bottom"
+        android:layout_below="@+id/opleggenKaartButton2"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
 
