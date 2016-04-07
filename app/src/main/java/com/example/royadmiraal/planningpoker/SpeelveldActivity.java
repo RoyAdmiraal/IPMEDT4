@@ -24,7 +24,14 @@ public class SpeelveldActivity extends AppCompatActivity {
 
     public void opleggen(View view){
 
-        kaartNummer = 2;
+        kaartNummer = 15;
+        createSpeelveld();
+
+    }
+
+    public void opleggen1(View view){
+
+        kaartNummer = 10;
         createSpeelveld();
 
     }
@@ -41,7 +48,7 @@ public class SpeelveldActivity extends AppCompatActivity {
         Button opleggenKaart = (Button) findViewById(R.id.opleggenKaartButton);
 
         plek1 = (ImageView) findViewById(R.id.plek1);
-        plek2 = (ImageView) findViewById(R.id.plek2);
+        plek2 = (ImageView) findViewById(R.id.plek2); 
         plek3 = (ImageView) findViewById(R.id.plek3);
         plek4 = (ImageView) findViewById(R.id.plek4);
         plek5 = (ImageView) findViewById(R.id.plek5);
@@ -89,7 +96,7 @@ public class SpeelveldActivity extends AppCompatActivity {
         TextView spelerNaam8 = (TextView) findViewById(R.id.spelerNaam8);
 
 
-        String spelerLijst[] = {"a", "s", "d", "f", "g", "h", "i", "j"};
+        String spelerLijst[] = {"Speler 1", "Speler 2", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", "Speler 8"};
 
         String print = "";
         for (String s : spelerLijst) {
