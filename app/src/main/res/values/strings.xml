@@ -2,13 +2,55 @@
     <string name="app_name">Planning Poker</string>
     <string name="title_activity_help">HelpActivity</string>
     <string name="help">
-        Nieuwe sessie uitleg
+        <b><u><font size="15">Nieuwe sessie uitleg</font></u></b>
+        \n
+        <font size="13">Hier kan u een nieuwe sessie aanmaken.\n
+        U vult hier uw gewenste spelernaam en de \n naam van de sessie in.\n
+        Vervolgens klikt u op <i>Doorgaan</i> en wordt uw \n sessie PIN getoond.\n
+        Deze PIN geeft u door aan uw beoogde medespelers \n zodat zij zich bij de sessie kunnen aansluiten.
+        </font>\n\n
+        <b><u><font size="15">Deelnemen Sessie uitleg</font></u></b>
+        \n
+        <font size="13">Hier kan u meedoen aan een nieuwe sessie. \n
+        Voer uw naam naar keuze in en de sessie PIN. \n
+        De sessie PIN ontvangt u van uw scrummaster.\n
+        Selecteer tot slot <i>Deelnemen Sessie</i> om mee te \n
+            doen aan de sessie.</font>
         \n\n
-        Deelnemen Sessie uitleg
+        <b><u><font size="15">Spelregels</font></u></b>
+        \n
+        <font size="13">Wanneer de sessie is gestart ziet u het \n
+            speelveld met beschrijving van de eerste taak. \n
+            Onderin het scherm ziet u uw selectie kaarten \n
+            waarvan u er één kan opleggen per ronde. \n
+            Op het moment dat de tijd verstrijkt of alle spelers een \n
+            kaart hebben opgelegt is de ronde afgelopen. \n
+            Nu worden alle oplegde kaarten van de deelnemers \n
+            getoond. \n
+            Aan de hand van de waarde van de opgelegde kaarten \n
+            kan u nu kiezen de naar de volgende taak te gaan \n
+            of de ronde te herstarten. \n
+            Indien de waarden van de opgelegde kaarten dicht bij \n
+            elkaar ligt kan u een planning maken voor de taak. \n
+            Indien de waarden ver uit elkaar ligt is het aangeraden \n
+            de ronde overnieuw te spelen. \n
+            Er zijn drie speciale kaarten die geen directe waarde \n
+            hebben. \n
+            Dit zijn de vraagteken, oneindig en koffietijd kaarten. \n
+            De vraagtaken kaart legt u op als werkeljk geen idee hebt \n
+            over hoe lang de betreffende taak gaat duren. \n
+            De oneindig kaart kan u leggen indien u vind dat een taak \n
+            vind om goed te kunnen plannen. \n
+            De koffietijd kaart kan u opleggen als u een pauze wilt \n
+            inlassen gedurende de sessie. \n
+        </font>
         \n\n
-        Spelregels
-        \n\n
-        Resutaten bekijken uitleg
+        <b><u><font size="15">Resutaten bekijken uitleg</font></u></b>
+        \n
+        <font size="13">Hier kan u resultaten van sessies uit het verleden \n
+            bekijken. \n
+        Indien u nog geen eerdere sessies heeft gespeeld zal \n
+            dit venster leeg zijn.</font>
     </string>
     <string name="title_activity_resultaten">Resultaten Sessie</string>
     <string name="title_activity_aanmaken">Aanmaken Sessie</string>
