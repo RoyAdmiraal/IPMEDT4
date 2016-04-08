@@ -40,16 +40,16 @@ public class ResultatenActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new OneFragment(), "Resultaat 1 vfgkuhr ijntjwn ogrniongiotwio gjioqjioj4oi5qjiogp3qkokkhtwokhtoh owk");
-        adapter.addFrag(new TwoFragment(), "Resultaat 2");
-        adapter.addFrag(new ThreeFragment(), "Resultaat 3");
-        adapter.addFrag(new FourFragment(), "Resultaat 4");
-        adapter.addFrag(new FiveFragment(), "Resultaat 5");
-        adapter.addFrag(new SixFragment(), "Resultaat 6");
-        adapter.addFrag(new SevenFragment(), "Resultaat 7");
-        adapter.addFrag(new EightFragment(), "Resultaat 8");
-        adapter.addFrag(new NineFragment(), "Resultaat 9");
-        adapter.addFrag(new TenFragment(), "Resultaat 10");
+        adapter.addFrag(new OneFragment(), "Resultaat 1 titel hier");
+        adapter.addFrag(new TwoFragment(), "Resultaat 2 titel hier");
+        adapter.addFrag(new ThreeFragment(), "Resultaat 3 titel hier");
+        adapter.addFrag(new FourFragment(), "Resultaat 4 titel hier");
+        adapter.addFrag(new FiveFragment(), "Resultaat 5 titel hier");
+        adapter.addFrag(new SixFragment(), "Resultaat 6 titel hier");
+        adapter.addFrag(new SevenFragment(), "Resultaat 7 titel hier");
+        adapter.addFrag(new EightFragment(), "Resultaat 8 titel hier");
+        adapter.addFrag(new NineFragment(), "Resultaat 9 titel hier");
+        adapter.addFrag(new TenFragment(), "Resultaat 10 titel hier");
         viewPager.setAdapter(adapter);
     }
 
