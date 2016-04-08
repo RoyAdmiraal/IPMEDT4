@@ -2,24 +2,29 @@
     <string name="app_name">Planning Poker</string>
     <string name="title_activity_help">HelpActivity</string>
     <string name="help">
-        <b><u><font size="15">Nieuwe sessie uitleg</font></u></b>
+        <b><u><font size="15">Nieuwe sessie</font></u></b>
         \n
-        <font size="13">Hier kan u een nieuwe sessie aanmaken.\n
-        U vult hier uw gewenste spelernaam en de \n naam van de sessie in.\n
-        Vervolgens klikt u op <i>Doorgaan</i> en wordt uw \n sessie PIN getoond.\n
-        Deze PIN geeft u door aan uw beoogde medespelers \n zodat zij zich bij de sessie kunnen aansluiten.
-        </font>\n\n
-        <b><u><font size="15">Deelnemen Sessie uitleg</font></u></b>
+        <font size="13">
+            Hier kan u een nieuwe sessie aanmaken.\n
+            U vult hier uw gewenste spelernaam en de \n naam van de sessie in.\n
+            Vervolgens klikt u op <i>Doorgaan</i> en wordt uw \n sessie PIN getoond.\n
+            Deze PIN geeft u door aan uw beoogde medespelers \n zodat zij zich bij de sessie kunnen aansluiten.\n
+        </font>
         \n
-        <font size="13">Hier kan u meedoen aan een nieuwe sessie. \n
-        Voer uw naam naar keuze in en de sessie PIN. \n
-        De sessie PIN ontvangt u van uw scrummaster.\n
-        Selecteer tot slot <i>Deelnemen Sessie</i> om mee te \n
-            doen aan de sessie.</font>
+        <b><u><font size="15">Deelnemen Sessie</font></u></b>
+        \n
+        <font size="13">
+            Hier kan u meedoen aan een nieuwe sessie.\n
+            Voer uw naam naar keuze in en de sessie PIN.\n
+            De sessie PIN ontvangt u van uw scrummaster.\n
+            Selecteer tot slot <i>Deelnemen Sessie</i> om mee te \n
+            doen aan de sessie.\n
+        </font>
         \n\n
         <b><u><font size="15">Spelregels</font></u></b>
         \n
-        <font size="13">Wanneer de sessie is gestart ziet u het \n
+        <font size="13">
+            Wanneer de sessie is gestart ziet u het \n
             speelveld met beschrijving van de eerste taak. \n
             Onderin het scherm ziet u uw selectie kaarten \n
             waarvan u er één kan opleggen per ronde. \n
@@ -44,31 +49,104 @@
             De koffietijd kaart kan u opleggen als u een pauze wilt \n
             inlassen gedurende de sessie. \n
         </font>
-        \n\n
+        \n
         <b><u><font size="15">Resutaten bekijken uitleg</font></u></b>
         \n
         <font size="13">Hier kan u resultaten van sessies uit het verleden \n
             bekijken. \n
-        Indien u nog geen eerdere sessies heeft gespeeld zal \n
+            Indien u nog geen eerdere sessies heeft gespeeld zal \n
             dit venster leeg zijn.</font>
     </string>
     <string name="title_activity_resultaten">Resultaten Sessie</string>
     <string name="title_activity_aanmaken">Aanmaken Sessie</string>
     <string name="title_activity_deelnemen">Deelnemen Sessie</string>
-    <string name="title_activity_deelnemenSpeelveld">Hier komt de naam van de ronde</string>
+    <string name="title_activity_deelnemenSpeelveld">Naam ronde hier</string>
 
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
-    <string name="fragment_one"> bla </string>
-    <string name="fragment_two"></string>
-    <string name="fragment_three"></string>
-    <string name="fragment_four">4444444</string>
-    <string name="fragment_five"></string>
-    <string name="fragment_six"></string>
-    <string name="fragment_seven">777777</string>
-    <string name="fragment_eight"></string>
-    <string name="fragment_nine"></string>
-    <string name="fragment_ten"></string>
+    <string name="fragment_one">
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n\n\n
+    </string>
+    <string name="fragment_two">
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n\n\n
+    </string>
+    <string name="fragment_three">333</string>
+    <string name="fragment_four">444</string>
+    <string name="fragment_five">555</string>
+    <string name="fragment_six">666</string>
+    <string name="fragment_seven">777</string>
+    <string name="fragment_eight">888</string>
+    <string name="fragment_nine">999</string>
+    <string name="fragment_ten">101010</string>
 
 </resources>
