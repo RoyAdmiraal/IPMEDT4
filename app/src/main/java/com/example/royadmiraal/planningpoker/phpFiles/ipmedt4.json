@@ -1,0 +1,66 @@
+{
+    "sessies": [
+        {
+            "sessie_id": "1",
+            "sessie_naam": "Final sprint mei 2016",
+            "sessie_timer": "00:01:33.7000",
+            "sessie_scrum_master_id": "1"
+        },
+        {
+            "sessie_id": "2",
+            "sessie_naam": "Nieuwe versie 1.337",
+            "sessie_timer": "00:01:33.7000",
+            "sessie_scrum_master_id": "1"
+        }
+    ],
+    "taken": [
+        {
+            "taak_id": "1",
+            "sessie_id": "1",
+            "taak_naam": "Splash screen",
+            "taak_beschrijving": "Het realiseren van een splash screen voor de app.",
+            "taak_resultaat": "4",
+            "taak_opmerking": "Onbekend."
+        },
+        {
+            "taak_id": "2",
+            "sessie_id": "1",
+            "taak_naam": "Database connectie",
+            "taak_beschrijving": "Database connectie werkend krijgen.",
+            "taak_resultaat": "2",
+            "taak_opmerking": "Er is maar een kleine fix voor nodig."
+        },
+        {
+            "taak_id": "3",
+            "sessie_id": "1",
+            "taak_naam": "Splash screen",
+            "taak_beschrijving": "Het realiseren van een splash screen voor de app.",
+            "taak_resultaat": "4",
+            "taak_opmerking": "Onbekend."
+        },
+        {
+            "taak_id": "4",
+            "sessie_id": "1",
+            "taak_naam": "Database connectie",
+            "taak_beschrijving": "Database connectie werkend krijgen.",
+            "taak_resultaat": "2",
+            "taak_opmerking": "Er is maar een kleine fix voor nodig."
+        },
+        {
+            "taak_id": "5",
+            "sessie_id": "1",
+            "taak_naam": "Splash screen",
+            "taak_beschrijving": "Het realiseren van een splash screen voor de app.",
+            "taak_resultaat": "4",
+            "taak_opmerking": "Onbekend."
+        },
+        {
+            "taak_id": "6",
+            "sessie_id": "2",
+            "taak_naam": "Database connectie",
+            "taak_beschrijving": "Database connectie werkend krijgen.",
+            "taak_resultaat": "2",
+            "taak_opmerking": "Er is maar een kleine fix voor nodig."
+        }
+    ]
+}

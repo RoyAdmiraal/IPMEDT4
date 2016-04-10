@@ -101,7 +101,7 @@
         Taak 3\n
         beschijving taak 3\n
         Resultaat taak 3\n
-        \n\n\n
+        \n\n
     </string>
     <string name="fragment_two">
         beschijving taak 1\n
@@ -138,15 +138,310 @@
         Taak 3\n
         beschijving taak 3\n
         Resultaat taak 3\n
-        \n\n\n
+        \n\n
     </string>
-    <string name="fragment_three">333</string>
-    <string name="fragment_four">444</string>
-    <string name="fragment_five">555</string>
-    <string name="fragment_six">666</string>
-    <string name="fragment_seven">777</string>
-    <string name="fragment_eight">888</string>
-    <string name="fragment_nine">999</string>
-    <string name="fragment_ten">101010</string>
+    <string name="fragment_three">
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n\n</string>
+    <string name="fragment_four">
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n\n
+    </string>
+    <string name="fragment_five">
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n\n
+    </string>
+    <string name="fragment_six">
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n\n
+    </string>
+    <string name="fragment_seven">
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n\n
+    </string>
+    <string name="fragment_eight">
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n\n
+    </string>
+    <string name="fragment_nine">
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n\n
+    </string>
+    <string name="fragment_ten">
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n
+        Taak 1\n
+        beschijving taak 1\n
+        Resultaat taak 1\n
+        \n
+        Taak 2\n
+        beschijving taak 2\n
+        Resultaat taak 2\n
+        \n
+        Taak 3\n
+        beschijving taak 3\n
+        Resultaat taak 3\n
+        \n\n
+    </string>
 
 </resources>

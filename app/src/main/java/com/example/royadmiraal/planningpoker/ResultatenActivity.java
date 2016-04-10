@@ -15,6 +15,7 @@ import java.util.List;
 public class ResultatenActivity extends AppCompatActivity {
 
     private int gebruikerId;
+    private String[] resultaten;
 
     private Toolbar toolbar;
     private TabLayout tabLayout;
@@ -22,7 +23,8 @@ public class ResultatenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getResults(1);
+        setGebruikerId(1);
+        setResults();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultaten);
@@ -38,27 +40,29 @@ public class ResultatenActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
+    private void setGebruikerId(int id) {
+        this.gebruikerId = id;
+    }
+
+    private void setResults() {
+
+
+    }
+
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new OneFragment(), "Resultaat 1 titel hier");
-        adapter.addFrag(new TwoFragment(), "Resultaat 2 titel hier");
-        adapter.addFrag(new ThreeFragment(), "Resultaat 3 titel hier");
-        adapter.addFrag(new FourFragment(), "Resultaat 4 titel hier");
-        adapter.addFrag(new FiveFragment(), "Resultaat 5 titel hier");
-        adapter.addFrag(new SixFragment(), "Resultaat 6 titel hier");
-        adapter.addFrag(new SevenFragment(), "Resultaat 7 titel hier");
-        adapter.addFrag(new EightFragment(), "Resultaat 8 titel hier");
-        adapter.addFrag(new NineFragment(), "Resultaat 9 titel hier");
-        adapter.addFrag(new TenFragment(), "Resultaat 10 titel hier");
+        adapter.addFrag(new OneFragment(), "bla");
+        adapter.addFrag(new TwoFragment(), "");
+        adapter.addFrag(new ThreeFragment(), "vla");
+        adapter.addFrag(new FourFragment(), "");
+        adapter.addFrag(new FiveFragment(), "");
+        adapter.addFrag(new SixFragment(), "");
+        adapter.addFrag(new SevenFragment(), "");
+        adapter.addFrag(new EightFragment(), "");
+        adapter.addFrag(new NineFragment(), "");
+        adapter.addFrag(new TenFragment(), "");
         viewPager.setAdapter(adapter);
     }
-
-    public int getResults(int id) {
-        this.gebruikerId = id;
-
-        return 0;
-    }
-
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
