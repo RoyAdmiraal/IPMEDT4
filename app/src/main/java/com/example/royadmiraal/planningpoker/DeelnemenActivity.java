@@ -12,15 +12,10 @@ import android.widget.EditText;
 
 public class DeelnemenActivity extends AppCompatActivity{
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deelnemen);
-
-
     }
 
     @Override
@@ -62,7 +57,6 @@ public class DeelnemenActivity extends AppCompatActivity{
 
 
         Log.d("invoerNaam", "naam wordt geregistreerd");
-        Log.d("SessieId", "PIN komt door");
 
         startActivity(new Intent(DeelnemenActivity.this, SpeelveldActivity.class));
     }

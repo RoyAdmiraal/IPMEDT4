@@ -6,6 +6,22 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Copyright © Groep A"
+        android:id="@+id/textView"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="10000dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        android:paddingBottom="45dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/help"
         android:id="@+id/textView2"
         android:layout_alignParentTop="true"
@@ -16,17 +32,10 @@
         android:layout_marginTop="16dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:maxLines = "30"
         android:scrollbars = "vertical"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Copyright © Groep A"
-        android:id="@+id/textView"
-        android:layout_marginBottom="16dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+    </ScrollView>
+
 
 </RelativeLayout>

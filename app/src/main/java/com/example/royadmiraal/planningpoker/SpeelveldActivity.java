@@ -43,7 +43,7 @@ public class SpeelveldActivity extends AppCompatActivity {
         setContentView(R.layout.activity_speelveld);
         Intent intent = getIntent();
         deelneemGegevens = intent.getStringArrayExtra("strings");
-        spelerLijst[1] = deelneemGegevens[0];
+        spelerLijst[7] = deelneemGegevens[0];
 
        createSpeelveld();
 
