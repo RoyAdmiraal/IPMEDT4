@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 
 /**
@@ -23,36 +25,37 @@ public class SpeelveldActivity extends AppCompatActivity {
     String []  spelerLijst = {"speler 1","Speler 2", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", "Speler 8"};
     ImageView plek1, plek2, plek3, plek4, plek5, plek6, plek7, plek8;
     int kaartNummer = 13;
+    ImageAdapter adapter;
 
     public void opleggen(View view){
 
-        kaartNummer = 15;
-        createSpeelveld();
+        adapter.instantiateItem()
+        adapter.getItemPosition(Object);
 
-    }
+        }
 
-    public void opleggen1(View view){
 
-        kaartNummer = 10;
-        createSpeelveld();
 
-    }
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_speelveld);
         Intent intent = getIntent();
         deelneemGegevens = intent.getStringArrayExtra("strings");
-        spelerLijst[1] = deelneemGegevens[0];
+        //spelerLijst[1] = deelneemGegevens[0];
 
-       createSpeelveld();
+        ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
+        adapter = new ImageAdapter(this);
+        viewPager.setAdapter(adapter);
+
+        createSpeelveld();
 
     }
     public void naamNaarDatabase(){
 
     }
     public void createSpeelveld(){
-
 
 
         Button opleggenKaart = (Button) findViewById(R.id.opleggenKaartButton);

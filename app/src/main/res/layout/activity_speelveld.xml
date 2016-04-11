@@ -204,27 +204,19 @@
         android:text="Hier komt de taak te staan"
         android:id="@+id/taakOmschrijving"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/opleggenKaartButton"
-        android:layout_alignEnd="@+id/opleggenKaartButton"
-        android:layout_marginTop="56dp" />
+        android:layout_marginTop="56dp"
+        android:layout_centerHorizontal="true" />
     <Button
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:text="Kaart kiezen"
-        android:id="@+id/opleggenKaartButton2"
-        android:onClick="opleggen1"
-        android:layout_gravity="bottom"
-        android:layout_below="@+id/GridLayout1"
-        android:layout_centerHorizontal="true" />
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="Standaartkaart"
         android:id="@+id/opleggenKaartButton"
         android:onClick="opleggen"
         android:layout_gravity="bottom"
-        android:layout_below="@+id/opleggenKaartButton2"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="37dp" />
 
     <ImageView
         android:layout_width="20dp"
@@ -233,5 +225,14 @@
         android:src="@drawable/scrumbutton"
         android:layout_marginLeft="33dp"
         android:layout_marginTop="222dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/GridLayout1"
+        android:layout_marginRight="120dp"
+        android:layout_marginLeft="120dp"
+         />
 </RelativeLayout>
 
