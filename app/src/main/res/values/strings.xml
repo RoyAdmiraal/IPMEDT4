@@ -56,6 +56,7 @@
             bekijken. \n
             Indien u nog geen eerdere sessies heeft gespeeld zal \n
             dit venster leeg zijn.</font>
+        \n
     </string>
     <string name="title_activity_resultaten">Resultaten Sessie</string>
     <string name="title_activity_aanmaken">Aanmaken Sessie</string>
