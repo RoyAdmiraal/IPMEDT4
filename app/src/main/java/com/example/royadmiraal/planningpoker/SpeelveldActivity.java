@@ -29,8 +29,8 @@ public class SpeelveldActivity extends AppCompatActivity {
 
     public void opleggen(View view){
 
-        adapter.instantiateItem()
-        adapter.getItemPosition(Object);
+       // adapter.instantiateItem()
+       // adapter.getItemPosition(Object);
 
         }
 
