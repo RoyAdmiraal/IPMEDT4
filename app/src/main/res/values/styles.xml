@@ -54,4 +54,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="taak_titel">
+        <item name="android:textSize">24dp</item>
+    </style>
+
+
 </resources>

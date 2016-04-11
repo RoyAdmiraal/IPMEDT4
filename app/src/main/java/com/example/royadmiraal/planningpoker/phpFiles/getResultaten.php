@@ -75,7 +75,7 @@ function getSessieResultaat($sessieId) {
                 ON 
                     taak_sessie_id = sessie_id
                 WHERE 
-                    sessie_id = 1";
+                    sessie_id = '$sessieId'";
 
     $result = mysqli_query($connect, $query);
 
