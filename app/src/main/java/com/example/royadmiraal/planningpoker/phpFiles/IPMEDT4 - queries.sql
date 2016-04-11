@@ -22,53 +22,37 @@ FROM gebruiker_sessie, sessie, ronde, taak
 WHERE gbr_sessie_gebruiker_id = 1 AND gbr_sessie_sessie_id = sessie_id AND sessie_id = ronde_sessie_id AND ronde_id = taak_ronde_id 
 ORDER BY sessie_id DESC;
 
--- Selecteren van sessies met naam en rondes van gebruiker 1! LIMIT TEST
-SELECT sessie_id, sessie_naam, taak_naam, taak_beschrijving, taak_opmerking, taak_resultaat
-FROM gebruiker_sessie, sessie, ronde, taak
-WHERE gbr_sessie_gebruiker_id = 1 AND gbr_sessie_sessie_id = sessie_id AND sessie_id = ronde_sessie_id AND ronde_id = taak_ronde_id
-GROUP BY sessie_id
-ORDER BY sessie_id DESC
-LIMIT 2;
 
-USE ipmedt4;
 
+-- Selecteren van de sessies  van een gebruiker
 SELECT 
-	DISTINCT gs.sessie_id
+	DISTINCT gbr_sessie_sessie_id
 FROM 
-	gebruiker_sessie AS gs
-WHERE
-	gs.gebruiker_id = 1
-LIMIT 10;
-
-SELECT 
-	COUNT(*), gs.sessie_id
-FROM 
-	gebruiker_sessie AS gs
-WHERE
-	gs.gebruiker_id = 1
-GROUP BY 
-	gs.sessie_id
-LIMIT 10;
-    
-SELECT 
-	s.sessie_id, 
-    s.sessie_naam, 
-	t.taak_naam, 
-    t.taak_beschrijving, 
-    t.taak_opmerking, 
-    t.taak_resultaat
-FROM 
-	sessie AS s
-INNER JOIN
-	ronde AS r
-ON
-	r.sessie_id = s.sessie_id
-INNER JOIN 
-	taak AS t
-ON 
-	t.ronde_id = r.ronde_id
+	gebruiker_sessie
 WHERE 
-	s.sessie_id = 2;
+	gbr_sessie_gebruiker_id = 1
+ORDER BY 
+	gbr_sessie_sessie_id DESC
+LIMIT 10;
+
+
+
+-- Selecteren een sessie met taken!
+SELECT 
+	sessie_id, 
+    sessie_naam, 
+	taak_naam, 
+    taak_beschrijving, 
+    taak_opmerking, 
+    taak_resultaat
+FROM 
+	sessie
+INNER JOIN 
+	taak
+ON 
+	taak_sessie_id = sessie_id
+WHERE 
+	sessie_id = 1;
     
 
     

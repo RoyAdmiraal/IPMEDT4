@@ -66,78 +66,37 @@
     <string name="section_format">Hello World from section: %1$d</string>
 
     <string name="fragment_one">
-        Taak 1\n
-        beschijving taak 1\n
-        Resultaat taak 1\n
-        \n
-        Taak 2\n
-        beschijving taak 2\n
-        Resultaat taak 2\n
-        \n
-        Taak 3\n
-        beschijving taak 3\n
-        Resultaat taak 3\n
-        \n
-        Taak 1\n
-        beschijving taak 1\n
-        Resultaat taak 1\n
-        \n
-        Taak 2\n
-        beschijving taak 2\n
-        Resultaat taak 2\n
-        \n
-        Taak 3\n
-        beschijving taak 3\n
-        Resultaat taak 3\n
-        \n
-        Taak 1\n
-        beschijving taak 1\n
-        Resultaat taak 1\n
-        \n
-        Taak 2\n
-        beschijving taak 2\n
-        Resultaat taak 2\n
-        \n
-        Taak 3\n
-        beschijving taak 3\n
-        Resultaat taak 3\n
+        Splash screen ontwerpen\n
+        Splash screen in high fidelity.\n
+        Omdat het geen moeilijke taak voor de ontwerper is.\n
+        Resultaat: <b>2.</b>\n
+        \n\n
+        Splash screen realiseren\n
+        Het volledige splash screen werkend in de app.\n
+        Er moet gewacht worden op het design vervolgens is het programmeer werk niet heel moeilijk.\n
+        Resultaat: <b>20.</b>\n
+        \n\n
+        Deelnemen sessie\n
+        Deelnemen sessie werkend maken.\n
+        Geen.\n
+        Resultaat: <b>5.</b>\n
         \n\n
     </string>
     <string name="fragment_two">
-        beschijving taak 1\n
-        Resultaat taak 1\n
-        \n
-        Taak 2\n
-        beschijving taak 2\n
-        Resultaat taak 2\n
-        \n
-        Taak 3\n
-        beschijving taak 3\n
-        Resultaat taak 3\n
-        \n
-        Taak 1\n
-        beschijving taak 1\n
-        Resultaat taak 1\n
-        \n
-        Taak 2\n
-        beschijving taak 2\n
-        Resultaat taak 2\n
-        \n
-        Taak 3\n
-        beschijving taak 3\n
-        Resultaat taak 3\n
-        \n
-        Taak 1\n
-        beschijving taak 1\n
-        Resultaat taak 1\n
-        \n
-        Taak 2\n
-        beschijving taak 2\n
-        Resultaat taak 2\n
-        \n
-        Taak 3\n
-        beschijving taak 3\n
-        Resultaat taak 3\n
+        Splash screen ontwerpen\n
+        Splash screen in high fidelity.\n
+        Omdat het geen moeilijke taak voor de ontwerper is.\n
+        Resultaat: <b>2.</b>\n
+        \n\n
+        Splash screen realiseren\n
+        Het volledige splash screen werkend in de app.\n
+        Er moet gewacht worden op het design vervolgens is het programmeer werk niet heel moeilijk.\n
+        Resultaat: <b>20.</b>\n
+        \n\n
+        Deelnemen sessie\n
+        Deelnemen sessie werkend maken.\n
+        Geen.\n
+        Resultaat: <b>5.</b>\n
         \n\n
     </string>
     <string name="fragment_three">
