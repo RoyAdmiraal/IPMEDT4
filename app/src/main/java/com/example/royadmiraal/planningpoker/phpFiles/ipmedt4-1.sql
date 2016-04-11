@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2016 at 11:44 AM
--- Server version: 10.1.10-MariaDB
--- PHP Version: 7.0.4
+-- Gegenereerd op: 10 apr 2016 om 12:57
+-- Serverversie: 10.1.10-MariaDB
+-- PHP-versie: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gebruiker`
+-- Tabelstructuur voor tabel `gebruiker`
 --
 
 CREATE TABLE `gebruiker` (
@@ -32,7 +32,7 @@ CREATE TABLE `gebruiker` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `gebruiker`
+-- Gegevens worden geëxporteerd voor tabel `gebruiker`
 --
 
 INSERT INTO `gebruiker` (`gebruiker_id`, `gebruiker_naam`) VALUES
@@ -43,7 +43,7 @@ INSERT INTO `gebruiker` (`gebruiker_id`, `gebruiker_naam`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gebruiker_sessie`
+-- Tabelstructuur voor tabel `gebruiker_sessie`
 --
 
 CREATE TABLE `gebruiker_sessie` (
@@ -52,7 +52,7 @@ CREATE TABLE `gebruiker_sessie` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `gebruiker_sessie`
+-- Gegevens worden geëxporteerd voor tabel `gebruiker_sessie`
 --
 
 INSERT INTO `gebruiker_sessie` (`gbr_sessie_sessie_id`, `gbr_sessie_gebruiker_id`) VALUES
@@ -64,37 +64,7 @@ INSERT INTO `gebruiker_sessie` (`gbr_sessie_sessie_id`, `gbr_sessie_gebruiker_id
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ronde`
---
-
-CREATE TABLE `ronde` (
-  `ronde_id` int(11) NOT NULL,
-  `ronde_nummer` int(11) NOT NULL,
-  `ronde_sessie_id` int(11) NOT NULL,
-  `ronde_kaart0` tinyint(2) NOT NULL DEFAULT '13',
-  `ronde_kaart1` tinyint(2) NOT NULL DEFAULT '13',
-  `ronde_kaart2` tinyint(2) NOT NULL DEFAULT '13',
-  `ronde_kaart3` tinyint(2) NOT NULL DEFAULT '13',
-  `ronde_kaart4` tinyint(2) NOT NULL DEFAULT '13',
-  `ronde_kaart5` tinyint(2) NOT NULL DEFAULT '13',
-  `ronde_kaart6` tinyint(2) NOT NULL DEFAULT '13',
-  `ronde_kaart7` tinyint(2) NOT NULL DEFAULT '13'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `ronde`
---
-
-INSERT INTO `ronde` (`ronde_id`, `ronde_nummer`, `ronde_sessie_id`, `ronde_kaart0`, `ronde_kaart1`, `ronde_kaart2`, `ronde_kaart3`, `ronde_kaart4`, `ronde_kaart5`, `ronde_kaart6`, `ronde_kaart7`) VALUES
-(1, 1, 1, 2, 3, 3, 13, 13, 13, 13, 13),
-(2, 2, 1, 4, 4, 4, 13, 13, 13, 13, 13),
-(3, 3, 1, 5, 6, 5, 13, 13, 13, 13, 13),
-(4, 1, 2, 8, 8, 8, 13, 13, 13, 13, 13);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sessie`
+-- Tabelstructuur voor tabel `sessie`
 --
 
 CREATE TABLE `sessie` (
@@ -105,7 +75,7 @@ CREATE TABLE `sessie` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `sessie`
+-- Gegevens worden geëxporteerd voor tabel `sessie`
 --
 
 INSERT INTO `sessie` (`sessie_id`, `sessie_naam`, `sessie_timer`, `sessie_sm_id`) VALUES
@@ -115,113 +85,109 @@ INSERT INTO `sessie` (`sessie_id`, `sessie_naam`, `sessie_timer`, `sessie_sm_id`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `taak`
+-- Tabelstructuur voor tabel `taak`
 --
 
 CREATE TABLE `taak` (
   `taak_id` int(11) NOT NULL,
-  `taak_ronde_id` int(11) NOT NULL,
+  `taak_sessie_id` int(11) NOT NULL,
   `taak_naam` varchar(255) NOT NULL,
   `taak_beschrijving` varchar(355) NOT NULL,
   `taak_resultaat` tinyint(1) NOT NULL,
-  `taak_opmerking` varchar(355) NOT NULL
+  `taak_opmerking` varchar(355) NOT NULL,
+  `taak_ronde` int(11) NOT NULL,
+  `taak_kaart0` tinyint(2) NOT NULL DEFAULT '13',
+  `taak_kaart1` tinyint(2) NOT NULL DEFAULT '13',
+  `taak_kaart2` tinyint(2) NOT NULL DEFAULT '13',
+  `taak_kaart3` tinyint(2) NOT NULL DEFAULT '13',
+  `taak_kaart4` tinyint(2) NOT NULL DEFAULT '13',
+  `taak_kaart5` tinyint(2) NOT NULL DEFAULT '13',
+  `taak_kaart6` tinyint(2) NOT NULL DEFAULT '13',
+  `taak_kaart7` tinyint(2) NOT NULL DEFAULT '13'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `taak`
+-- Gegevens worden geëxporteerd voor tabel `taak`
 --
 
-INSERT INTO `taak` (`taak_id`, `taak_ronde_id`, `taak_naam`, `taak_beschrijving`, `taak_resultaat`, `taak_opmerking`) VALUES
-(1, 1, 'Splash screen ontwerpen', 'Splash screen in high fidelity.', 3, 'Is geen moeilijke taak voor de ontwerper.'),
-(2, 2, 'Splash screen realiseren', 'Het volledige splash screen werkend in de app.', 4, 'Moet wachten op het design verder is het programmeer werk niet heel moeilijk.'),
-(3, 3, 'Deelnemen sessie', 'Deelnemen sessie werkend maken.', 5, 'Geen'),
-(4, 4, 'Taak 1 Lorem Ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla diam id elementum posuere.', 8, 'Etiam fringilla diam id elementum posuere.');
+INSERT INTO `taak` (`taak_id`, `taak_sessie_id`, `taak_naam`, `taak_beschrijving`, `taak_resultaat`, `taak_opmerking`, `taak_ronde`, `taak_kaart0`, `taak_kaart1`, `taak_kaart2`, `taak_kaart3`, `taak_kaart4`, `taak_kaart5`, `taak_kaart6`, `taak_kaart7`) VALUES
+(1, 1, 'Splash screen ontwerpen', 'Splash screen in high fidelity.', 3, 'Omdat het geen moeilijke taak voor de ontwerper is.', 1, 2, 3, 3, 13, 13, 13, 13, 13),
+(2, 1, 'Splash screen realiseren', 'Het volledige splash screen werkend in de app.', 4, 'Er moet gewacht worden op het design verder is het programmeer werk niet heel moeilijk.', 2, 4, 4, 4, 13, 13, 13, 13, 13),
+(3, 1, 'Deelnemen sessie', 'Deelnemen sessie werkend maken.', 5, 'Geen.', 3, 5, 6, 5, 13, 13, 13, 13, 13),
+(4, 2, 'Splash screen realiseren', 'Het volledige splash screen werkend in de app.', 8, 'Er moet gewacht worden op het design verder is het programmeer werk niet heel moeilijk.', 1, 8, 8, 8, 13, 13, 13, 13, 13);
 
 --
--- Indexes for dumped tables
+-- Indexen voor geëxporteerde tabellen
 --
 
 --
--- Indexes for table `gebruiker`
+-- Indexen voor tabel `gebruiker`
 --
 ALTER TABLE `gebruiker`
   ADD PRIMARY KEY (`gebruiker_id`);
 
 --
--- Indexes for table `gebruiker_sessie`
+-- Indexen voor tabel `gebruiker_sessie`
 --
 ALTER TABLE `gebruiker_sessie`
   ADD KEY `sessie_id` (`gbr_sessie_sessie_id`),
   ADD KEY `gebruiker_id` (`gbr_sessie_gebruiker_id`);
 
 --
--- Indexes for table `ronde`
---
-ALTER TABLE `ronde`
-  ADD PRIMARY KEY (`ronde_id`),
-  ADD KEY `sessie_id` (`ronde_sessie_id`);
-
---
--- Indexes for table `sessie`
+-- Indexen voor tabel `sessie`
 --
 ALTER TABLE `sessie`
   ADD PRIMARY KEY (`sessie_id`),
   ADD KEY `sessie_scrum_master_id` (`sessie_sm_id`);
 
 --
--- Indexes for table `taak`
+-- Indexen voor tabel `taak`
 --
 ALTER TABLE `taak`
   ADD PRIMARY KEY (`taak_id`),
-  ADD KEY `ronde_id` (`taak_ronde_id`) USING BTREE;
+  ADD KEY `sessie_id` (`taak_sessie_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
 --
--- AUTO_INCREMENT for table `gebruiker`
+-- AUTO_INCREMENT voor een tabel `gebruiker`
 --
 ALTER TABLE `gebruiker`
   MODIFY `gebruiker_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `ronde`
---
-ALTER TABLE `ronde`
-  MODIFY `ronde_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT for table `sessie`
+-- AUTO_INCREMENT voor een tabel `sessie`
 --
 ALTER TABLE `sessie`
   MODIFY `sessie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `taak`
+-- AUTO_INCREMENT voor een tabel `taak`
 --
 ALTER TABLE `taak`
   MODIFY `taak_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- Constraints for dumped tables
+-- Beperkingen voor geëxporteerde tabellen
 --
 
 --
--- Constraints for table `gebruiker_sessie`
+-- Beperkingen voor tabel `gebruiker_sessie`
 --
 ALTER TABLE `gebruiker_sessie`
   ADD CONSTRAINT `gebruiker_sessie_ibfk_1` FOREIGN KEY (`gbr_sessie_sessie_id`) REFERENCES `sessie` (`sessie_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `gebruiker_sessie_ibfk_2` FOREIGN KEY (`gbr_sessie_gebruiker_id`) REFERENCES `gebruiker` (`gebruiker_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `ronde`
---
-ALTER TABLE `ronde`
-  ADD CONSTRAINT `ronde_ibfk_1` FOREIGN KEY (`ronde_sessie_id`) REFERENCES `sessie` (`sessie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `ronde_ibfk_2` FOREIGN KEY (`ronde_id`) REFERENCES `taak` (`taak_ronde_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `sessie`
+-- Beperkingen voor tabel `sessie`
 --
 ALTER TABLE `sessie`
   ADD CONSTRAINT `sessie_ibfk_1` FOREIGN KEY (`sessie_sm_id`) REFERENCES `gebruiker` (`gebruiker_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Beperkingen voor tabel `taak`
+--
+ALTER TABLE `taak`
+  ADD CONSTRAINT `taak_ibfk_1` FOREIGN KEY (`taak_sessie_id`) REFERENCES `sessie` (`sessie_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
