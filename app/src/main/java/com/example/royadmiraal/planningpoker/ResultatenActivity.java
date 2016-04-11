@@ -15,6 +15,7 @@ import java.util.List;
 public class ResultatenActivity extends AppCompatActivity {
 
     private int gebruikerId;
+    private int[] sessies;
     private String[] resultaten;
 
     private Toolbar toolbar;
@@ -51,9 +52,9 @@ public class ResultatenActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new OneFragment(), "bla");
-        adapter.addFrag(new TwoFragment(), "");
-        adapter.addFrag(new ThreeFragment(), "vla");
+        adapter.addFrag(new OneFragment(), "Taak 2");
+        adapter.addFrag(new TwoFragment(), "Taak 1");
+        adapter.addFrag(new ThreeFragment(), "");
         adapter.addFrag(new FourFragment(), "");
         adapter.addFrag(new FiveFragment(), "");
         adapter.addFrag(new SixFragment(), "");
