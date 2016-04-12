@@ -14,10 +14,11 @@ import java.util.Objects;
  * Created by Royadmiraal on 11-04-16.
  */
 public class ImageAdapter extends PagerAdapter{
+    private static int selectedCard;
     Context context;
     public int[] GalImages = new int[] {
-            R.drawable.kaart0_5,
             R.drawable.kaart0,
+            R.drawable.kaart0_5,
             R.drawable.kaart1,
             R.drawable.kaart2,
             R.drawable.kaart3,
@@ -29,13 +30,20 @@ public class ImageAdapter extends PagerAdapter{
             R.drawable.kaart100,
             R.drawable.kaartoneindig,
             R.drawable.kaartvraagteken,
-            R.drawable.kaartkoffie,
+            R.drawable.kaartkoffie
 
     };
+    private int kaartNummer;
+
 
     ImageAdapter(Context context){
         this.context=context;
     }
+
+    public static int getSelectedCard() {
+        return selectedCard;
+    }
+
     @Override
     public int getCount() {
         return GalImages.length;
@@ -57,6 +65,10 @@ public class ImageAdapter extends PagerAdapter{
         imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         imageView.setImageResource(GalImages[position]);
 
+        setSelectedCard(position);
+
+
+
         ((ViewPager) container).addView(imageView, 0);
         return imageView;
     }
@@ -74,5 +86,9 @@ public class ImageAdapter extends PagerAdapter{
     public void destroyItem(ViewGroup container, int position, Object object) {
         ((ViewPager) container).removeView((ImageView) object);
 
+    }
+
+    public void setSelectedCard(int selectedCard) {
+        this.selectedCard = selectedCard;
     }
 }

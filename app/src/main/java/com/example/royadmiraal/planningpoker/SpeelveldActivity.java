@@ -23,14 +23,15 @@ public class SpeelveldActivity extends AppCompatActivity {
 
     String []  deelneemGegevens = {"naam","Sessie id"};
     String []  spelerLijst = {"speler 1","Speler 2", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", "Speler 8"};
+    private int [] kaartenLijstSpelers = {13, 13, 13 ,13 ,13 ,13 ,13 ,13};
     ImageView plek1, plek2, plek3, plek4, plek5, plek6, plek7, plek8;
     int kaartNummer = 13;
     ImageAdapter adapter;
 
     public void opleggen(View view){
-
-        // adapter.instantiateItem()
-        // adapter.getItemPosition(Object);
+        Log.d("Log data: ", String.valueOf(ImageAdapter.getSelectedCard()));
+        kaartNummer = 15; // achterkant kaart
+        createSpeelveld(kaartenLijstSpelers);
 
     }
 
@@ -55,7 +56,7 @@ public class SpeelveldActivity extends AppCompatActivity {
     public void naamNaarDatabase(){
 
     }
-    public void createSpeelveld(){
+    public void createSpeelveld(int [] kaartenLijstSpelers){
 
 
         Button opleggenKaart = (Button) findViewById(R.id.opleggenKaartButton);
@@ -85,9 +86,16 @@ public class SpeelveldActivity extends AppCompatActivity {
                 R.drawable.kaartvraagteken,             // array 12 kaart vraagteken
                 R.drawable.kaartstandaart,              // array 13 kaart standaart
                 R.drawable.kaartkoffie,                 // array 14 kaart koffie
-                R.drawable.kaartachterkant,};           // array 15 kaart achterkant
+                R.drawable.kaartachterkant};           // array 15 kaart achterkant
 
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), kaartenLijst[kaartNummer]);
+        Bitmap bitmap;
+
+        for(int i =0; i < kaartenLijstSpelers.length; i ++){
+             bitmap = BitmapFactory.decodeResource(getResources(), kaartenLijst[kaartenLijstSpelers[i]]);
+
+        }
+
+
         plek1.setImageBitmap(bitmap);
         plek2.setImageBitmap(bitmap);
         plek3.setImageBitmap(bitmap);
@@ -96,6 +104,9 @@ public class SpeelveldActivity extends AppCompatActivity {
         plek6.setImageBitmap(bitmap);
         plek7.setImageBitmap(bitmap);
         plek8.setImageBitmap(bitmap);
+
+        //Bitmap bitmap = BitmapFactory.decodeResource(getResources(), kaartenLijst[kaartNummer]);
+
 
 
 
