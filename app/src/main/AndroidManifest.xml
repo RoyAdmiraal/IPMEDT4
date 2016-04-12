@@ -29,7 +29,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".SessieEigenschappenActivity"
-            android:screenOrientation="portrait" />
+            android:label="@string/title_activity_sessie_eigenschappen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DeelnemenActivity"
             android:label="@string/title_activity_deelnemen"
