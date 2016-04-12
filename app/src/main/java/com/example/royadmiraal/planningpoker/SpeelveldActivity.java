@@ -15,29 +15,51 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.Objects;
 
-
 /**
- * Created by Royadmiraal on 04-04-16.
+ * Created by IPMEDT4 - Groep A on 04-04-16.
  */
-public class SpeelveldActivity extends AppCompatActivity {
 
-    String []  deelneemGegevens = {"naam","Sessie id"};
-    String []  spelerLijst = {"speler 1","Speler 2", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", "Speler 8"};
-    private int [] kaartenLijstSpelers = {13, 13, 13 ,13 ,13 ,13 ,13 ,13};
+public class SpeelveldActivity extends AppCompatActivity {
+    private String[] deelneemGegevens = {"naam", "Sessie id"};
+    public boolean toonKaarten = true;
+    private String[] spelerLijst = {"S.M. hier", "Collin Woerde", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", "Speler 8"};
+    private int[] tempKaartenLijstSpelers = {16, 16, 16, 16, 16, 16, 16, 16};
+    private int[] kaartenLijstSpelers = {14, 14, 14, 14, 14, 14, 14, 14};
     ImageView plek1, plek2, plek3, plek4, plek5, plek6, plek7, plek8;
-    int kaartNummer = 13;
     ImageAdapter adapter;
 
-    public void opleggen(View view){
-        Log.d("Log data: ", String.valueOf(ImageAdapter.getSelectedCard()));
-        kaartNummer = 15; // achterkant kaart
-        createSpeelveld(kaartenLijstSpelers);
-
+    private void getKaartenDatabase() {
+        for (int i = 0; i < kaartenLijstSpelers.length; i++) {
+            kaartenLijstSpelers[i] = 1337;
+        }
     }
 
+    public void opleggen(View view) {
+        kaartenLijstSpelers[1] = ImageAdapter.getSelectedCard();
+        toonSpeelveld();
+    }
 
+    private void setKaarten() {
+        for (int i = 0; i < kaartenLijstSpelers.length; i++) {
+            if (kaartenLijstSpelers[i] != 16 && kaartenLijstSpelers[i] != 14) {
+                tempKaartenLijstSpelers[i] = 15;
+                Log.d("log data: ", i + " = 15");
+            } else {
+                if(kaartenLijstSpelers[i] != 16) {
+                    tempKaartenLijstSpelers[i] = 14;
+                }
+            }
+        }
+    }
 
-
+    private void toonSpeelveld() {
+        setKaarten();
+        if (toonKaarten) {
+            createSpeelveld(kaartenLijstSpelers);
+        } else {
+            createSpeelveld(tempKaartenLijstSpelers);
+        }
+    }
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,17 +72,11 @@ public class SpeelveldActivity extends AppCompatActivity {
         adapter = new ImageAdapter(this);
         viewPager.setAdapter(adapter);
 
-        createSpeelveld();
+        createSpeelveld(kaartenLijstSpelers);
 
     }
-    public void naamNaarDatabase(){
 
-    }
-    public void createSpeelveld(int [] kaartenLijstSpelers){
-
-
-        Button opleggenKaart = (Button) findViewById(R.id.opleggenKaartButton);
-
+    public void createSpeelveld(int[] kaartenLijstSpelers) {
         plek1 = (ImageView) findViewById(R.id.plek1);
         plek2 = (ImageView) findViewById(R.id.plek2);
         plek3 = (ImageView) findViewById(R.id.plek3);
@@ -71,43 +87,71 @@ public class SpeelveldActivity extends AppCompatActivity {
         plek8 = (ImageView) findViewById(R.id.plek8);
 
         int[] kaartenLijst = new int[]{
-                R.drawable.kaart0,                      // array 0 kaart  0
-                R.drawable.kaart0_5,                    // array 1 kaart  0.5
-                R.drawable.kaart1,                      // array 2 kaart  1
-                R.drawable.kaart2,                      // array 3 kaart  2
-                R.drawable.kaart3,                      // array 4 kaart  3
-                R.drawable.kaart5,                      // array 5 kaart  5
-                R.drawable.kaart8,                      // array 6 kaart  8
-                R.drawable.kaart13,                     // array 7 kaart  13
-                R.drawable.kaart20,                     // array 8 kaart  20
-                R.drawable.kaart40,                     // array 9 kaart  40
-                R.drawable.kaart100,                    // array 10 kaart 100
-                R.drawable.kaartoneindig,               // array 11 kaart oneinding
-                R.drawable.kaartvraagteken,             // array 12 kaart vraagteken
-                R.drawable.kaartstandaart,              // array 13 kaart standaart
-                R.drawable.kaartkoffie,                 // array 14 kaart koffie
-                R.drawable.kaartachterkant};           // array 15 kaart achterkant
+                R.drawable.kaart0,                      // array nr. 0 = kaart  0
+                R.drawable.kaart0_5,                    // array nr. 1 = kaart  0.5
+                R.drawable.kaart1,                      // array nr. 2 = kaart  1
+                R.drawable.kaart2,                      // array nr. 3 = kaart  2
+                R.drawable.kaart3,                      // array nr. 4 = kaart  3
+                R.drawable.kaart5,                      // array nr. 5 = kaart  5
+                R.drawable.kaart8,                      // array nr. 6 = kaart  8
+                R.drawable.kaart13,                     // array nr. 7 = kaart  13
+                R.drawable.kaart20,                     // array nr. 8 = kaart  20
+                R.drawable.kaart40,                     // array nr. 9 = kaart  40
+                R.drawable.kaart100,                    // array nr. 10 = kaart 100
+                R.drawable.kaart_inf,                   // array nr. 11 = kaart oneindig
+                R.drawable.kaart_vraag,                 // array nr. 12 = kaart vraagteken
+                R.drawable.kaart_koffie,                // array nr. 13 = kaart koffie
+                R.drawable.kaart_standaart,             // array nr. 14 = kaart standaart (grijs)
+                R.drawable.kaart_achterkant,            // array nr. 15 = kaart achterkant (opgelegd)
+                R.drawable.kaart_leeg                   // array nr. 16 = kaart leeg
+        };
 
         Bitmap bitmap;
 
-        for(int i =0; i < kaartenLijstSpelers.length; i ++){
-             bitmap = BitmapFactory.decodeResource(getResources(), kaartenLijst[kaartenLijstSpelers[i]]);
+        for (int i = 0; i < kaartenLijstSpelers.length; i++) {
+            //Log.d("Log data:", String.valueOf(kaartenLijstSpelers[i]));
 
+            bitmap = BitmapFactory.decodeResource(getResources(), kaartenLijst[kaartenLijstSpelers[i]]);
+
+            switch (i) {
+                case 0:
+                    plek1.setImageBitmap(bitmap);
+                    break;
+                case 1:
+                    plek2.setImageBitmap(bitmap);
+                    break;
+                case 2:
+                    plek3.setImageBitmap(bitmap);
+                    break;
+                case 3:
+                    plek4.setImageBitmap(bitmap);
+                    break;
+                case 4:
+                    plek5.setImageBitmap(bitmap);
+                    break;
+                case 5:
+                    plek6.setImageBitmap(bitmap);
+                    break;
+                case 6:
+                    plek7.setImageBitmap(bitmap);
+                    break;
+                case 7:
+                    plek8.setImageBitmap(bitmap);
+                    break;
+                default:
+                    Log.d("Log data: ", "Lege array...");
+                    plek1.setImageBitmap(bitmap);
+                    plek2.setImageBitmap(bitmap);
+                    plek3.setImageBitmap(bitmap);
+                    plek4.setImageBitmap(bitmap);
+                    plek5.setImageBitmap(bitmap);
+                    plek6.setImageBitmap(bitmap);
+                    plek7.setImageBitmap(bitmap);
+                    plek8.setImageBitmap(bitmap);
+            }
         }
 
-
-        plek1.setImageBitmap(bitmap);
-        plek2.setImageBitmap(bitmap);
-        plek3.setImageBitmap(bitmap);
-        plek4.setImageBitmap(bitmap);
-        plek5.setImageBitmap(bitmap);
-        plek6.setImageBitmap(bitmap);
-        plek7.setImageBitmap(bitmap);
-        plek8.setImageBitmap(bitmap);
-
         //Bitmap bitmap = BitmapFactory.decodeResource(getResources(), kaartenLijst[kaartNummer]);
-
-
 
 
         TextView spelerNaam1 = (TextView) findViewById(R.id.spelerNaam1);
@@ -118,8 +162,6 @@ public class SpeelveldActivity extends AppCompatActivity {
         TextView spelerNaam6 = (TextView) findViewById(R.id.spelerNaam6);
         TextView spelerNaam7 = (TextView) findViewById(R.id.spelerNaam7);
         TextView spelerNaam8 = (TextView) findViewById(R.id.spelerNaam8);
-
-
 
 
         String print = "";
@@ -135,8 +177,6 @@ public class SpeelveldActivity extends AppCompatActivity {
         spelerNaam6.setText(spelerLijst[5]);
         spelerNaam7.setText(spelerLijst[6]);
         spelerNaam8.setText(spelerLijst[7]);
-
-
 
 
     }

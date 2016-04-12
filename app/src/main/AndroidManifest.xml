@@ -8,31 +8,44 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HelpActivity" />
+        <activity
+            android:name=".HelpActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".AanmakenActivity"
-            android:label="@string/title_activity_aanmaken" />
-        <activity android:name=".SessieEigenschappenActivity" />
+            android:label="@string/title_activity_aanmaken"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SessieEigenschappenActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".DeelnemenActivity"
-            android:label="@string/title_activity_deelnemen" />
+            android:label="@string/title_activity_deelnemen"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ResultatenActivity"
             android:label="@string/title_activity_resultaten"
-            android:theme="@style/MyMaterialTheme.Base"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme.Base" />
         <activity
             android:name=".SpeelveldActivity"
-            android:label="@string/title_activity_deelnemenSpeelveld"></activity>
-        <activity android:name=".TaakToevoegenActivity"></activity>
+            android:label="@string/title_activity_deelnemenSpeelveld"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TaakToevoegenActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -11,37 +11,31 @@ import android.widget.ImageView;
 import java.util.Objects;
 
 /**
- * Created by Royadmiraal on 11-04-16.
+ * Created by IPMEDT4 - Groep A on 11-04-16.
  */
+
 public class ImageAdapter extends PagerAdapter{
     private static int selectedCard;
     Context context;
     public int[] GalImages = new int[] {
-            R.drawable.kaart0,
-            R.drawable.kaart0_5,
-            R.drawable.kaart1,
-            R.drawable.kaart2,
-            R.drawable.kaart3,
-            R.drawable.kaart5,
-            R.drawable.kaart8,
-            R.drawable.kaart13,
-            R.drawable.kaart20,
-            R.drawable.kaart40,
-            R.drawable.kaart100,
-            R.drawable.kaartoneindig,
-            R.drawable.kaartvraagteken,
-            R.drawable.kaartkoffie
-
+            R.drawable.kaart0,                      // array nr. 0 = kaart  0
+            R.drawable.kaart0_5,                    // array nr. 1 = kaart  0.5
+            R.drawable.kaart1,                      // array nr. 2 = kaart  1
+            R.drawable.kaart2,                      // array nr. 3 = kaart  2
+            R.drawable.kaart3,                      // array nr. 4 = kaart  3
+            R.drawable.kaart5,                      // array nr. 5 = kaart  5
+            R.drawable.kaart8,                      // array nr. 6 = kaart  8
+            R.drawable.kaart13,                     // array nr. 7 = kaart  13
+            R.drawable.kaart20,                     // array nr. 8 = kaart  20
+            R.drawable.kaart40,                     // array nr. 9 = kaart  40
+            R.drawable.kaart100,                    // array nr. 10 = kaart 100
+            R.drawable.kaart_inf,                   // array nr. 11 = kaart oneindig
+            R.drawable.kaart_vraag,                 // array nr. 12 = kaart vraagteken
+            R.drawable.kaart_koffie,                // array nr. 13 = kaart koffie
     };
-    private int kaartNummer;
-
 
     ImageAdapter(Context context){
         this.context=context;
-    }
-
-    public static int getSelectedCard() {
-        return selectedCard;
     }
 
     @Override
@@ -86,6 +80,10 @@ public class ImageAdapter extends PagerAdapter{
     public void destroyItem(ViewGroup container, int position, Object object) {
         ((ViewPager) container).removeView((ImageView) object);
 
+    }
+
+    public static int getSelectedCard() {
+        return selectedCard;
     }
 
     public void setSelectedCard(int selectedCard) {
