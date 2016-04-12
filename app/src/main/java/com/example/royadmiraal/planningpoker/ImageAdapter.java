@@ -84,7 +84,8 @@ public class ImageAdapter extends PagerAdapter{
         return selectedCard;
     }
 
-    public void setSelectedCard(int selectedCard) {
+    public void setSelectedCard(int
+                                        electedCard) {
         this.selectedCard = selectedCard;
     }
 }

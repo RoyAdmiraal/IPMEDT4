@@ -403,5 +403,6 @@
         Resultaat taak 3\n
         \n\n
     </string>
+    <string name="title_activity_sessie_eigenschappen">SessieEigenschappenActivity</string>
 
 </resources>

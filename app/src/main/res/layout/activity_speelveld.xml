@@ -257,6 +257,7 @@
         android:layout_height="fill_parent"
         android:layout_below="@+id/GridLayout1"
         android:layout_marginLeft="120dp"
-        android:layout_marginRight="120dp" />
+        android:layout_marginRight="120dp"
+        android:longClickable="false" />
 </RelativeLayout>
 

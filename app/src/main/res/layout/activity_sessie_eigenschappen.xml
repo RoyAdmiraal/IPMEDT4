@@ -1,35 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.royadmiraal.planningpoker.SessieEigenschappenActivity"
-    android:scrollIndicators="right">
+    android:fitsSystemWindows="true"
+    tools:context="com.example.royadmiraal.planningpoker.SessieEigenschappenActivity">
 
-    <TextView
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Sessie pin"
-        android:id="@+id/sessiePin"
-        android:layout_gravity="center_horizontal"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/doorgaanButton"
-        android:layout_alignStart="@+id/doorgaanButton" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="PIN komt hier"
-        android:id="@+id/IdPin"
-        android:layout_gravity="center_horizontal"
-        android:layout_above="@+id/listView"
-        android:layout_centerHorizontal="true" />
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="45dp" />
 
     <Button
         style="@style/Button"
@@ -39,52 +42,10 @@
         android:id="@+id/sessieStartenButton"
         android:onClick="doorgaanSpeelveld"
         android:layout_gravity="center_horizontal"
-        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/fab"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        style="@style/Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Taak toevoegen"
-        android:id="@+id/taakToevoegenButton"
-        android:onClick=""
-        android:layout_gravity="center_horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/listView"
-        android:layout_alignEnd="@+id/listView" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Ronde timer"
-        android:id="@+id/rondeTimer"
-        android:textSize="30dp"
-        android:layout_above="@+id/sessieStartenButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Chronometer
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/chronometer"
-        android:textSize="30dp"
-        android:clickable="true"
-        android:autoText="false"
-        android:format="H:MM:SS"
-        android:layout_below="@+id/listView"
-        android:layout_alignLeft="@+id/taakToevoegenButton"
-        android:layout_alignStart="@+id/taakToevoegenButton" />
-
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:nestedScrollingEnabled="true"
-        android:layout_above="@+id/rondeTimer"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/sessiePin" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="47dp"
+        android:layout_marginStart="47dp" />
 
 </RelativeLayout>
