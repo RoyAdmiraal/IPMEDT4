@@ -47,8 +47,6 @@ public class ImageAdapter extends PagerAdapter{
     @Override
     public boolean isViewFromObject(View view, Object object) {
         return view == ((ImageView) object);
-
-
     }
 
     @Override
@@ -58,6 +56,8 @@ public class ImageAdapter extends PagerAdapter{
         imageView.setPadding(padding, padding, padding, padding);
         imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         imageView.setImageResource(GalImages[position]);
+
+        Log.d("Log data: ", "Position " + position);
 
         setSelectedCard(position);
         ((ViewPager) container).addView(imageView, 0);
@@ -69,7 +69,7 @@ public class ImageAdapter extends PagerAdapter{
     @Override
     public int getItemPosition(Object object) {
         String test = String.valueOf(super.getItemPosition(object));
-        Log.d("", test);
+        Log.d("Log data: ItemPosition", test);
 
         return super.getItemPosition(object);
     }

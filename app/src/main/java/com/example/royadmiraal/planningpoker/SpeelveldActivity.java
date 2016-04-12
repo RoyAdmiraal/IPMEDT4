@@ -25,7 +25,7 @@ import java.util.Objects;
 public class SpeelveldActivity extends AppCompatActivity {
     private String[] deelneemGegevens = {"naam", "Sessie id"};
     public boolean toonKaarten = true; //TODO op false en alleen op true door scrum master of als de timer is afgelopen
-    private String[] spelerLijst = {"S.M. hier", "Collin Woerde", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", ""};
+    private String[] spelerLijst = {"S.M. hier", "Collin Woerde", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", "Speler 8"};
     private int[] tempKaartenLijstSpelers = {14, 14, 14, 14, 14, 14, 14, 14};
     private int[] kaartenLijstSpelers = {14, 14, 14, 14, 14, 14, 14, 14};
     ImageView plek1, plek2, plek3, plek4, plek5, plek6, plek7, plek8;
@@ -34,7 +34,7 @@ public class SpeelveldActivity extends AppCompatActivity {
     private void getKaartenDatabase() {
 
 
-        Log.d("Log data: ", " haalt nu op uit db");
+        Log.d("Log data: ", "haalt nu op uit db");
 
         if (0 == 1){//TODO remove if
             for (int i = 0; i < kaartenLijstSpelers.length; i++) {
@@ -68,10 +68,10 @@ public class SpeelveldActivity extends AppCompatActivity {
     private void toonSpeelveld() {
         setKaarten();
         if (toonKaarten) {
-            Log.d("Log data: ", " toonKaarten true");
+            Log.d("Log data: ", "toonKaarten true");
             createSpeelveld(kaartenLijstSpelers);
         } else {
-            Log.d("Log data: ", " toonKaarten false");
+            Log.d("Log data: ", "toonKaarten false");
             createSpeelveld(tempKaartenLijstSpelers);
         }
     }
