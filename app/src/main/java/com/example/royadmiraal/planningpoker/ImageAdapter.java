@@ -60,19 +60,17 @@ public class ImageAdapter extends PagerAdapter{
         imageView.setImageResource(GalImages[position]);
 
         setSelectedCard(position);
-
-
-
         ((ViewPager) container).addView(imageView, 0);
+
         return imageView;
     }
 
 
     @Override
     public int getItemPosition(Object object) {
-
         String test = String.valueOf(super.getItemPosition(object));
         Log.d("", test);
+
         return super.getItemPosition(object);
     }
 

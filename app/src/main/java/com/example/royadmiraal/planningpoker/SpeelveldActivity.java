@@ -19,19 +19,30 @@ import java.util.Objects;
  * Created by IPMEDT4 - Groep A on 04-04-16.
  */
 
+    //TODO namen en kaarten in en uit database
+
+
 public class SpeelveldActivity extends AppCompatActivity {
     private String[] deelneemGegevens = {"naam", "Sessie id"};
-    public boolean toonKaarten = true;
-    private String[] spelerLijst = {"S.M. hier", "Collin Woerde", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", "Speler 8"};
-    private int[] tempKaartenLijstSpelers = {16, 16, 16, 16, 16, 16, 16, 16};
+    public boolean toonKaarten = true; //TODO op false en alleen op true door scrum master of als de timer is afgelopen
+    private String[] spelerLijst = {"S.M. hier", "Collin Woerde", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", ""};
+    private int[] tempKaartenLijstSpelers = {14, 14, 14, 14, 14, 14, 14, 14};
     private int[] kaartenLijstSpelers = {14, 14, 14, 14, 14, 14, 14, 14};
     ImageView plek1, plek2, plek3, plek4, plek5, plek6, plek7, plek8;
     ImageAdapter adapter;
 
     private void getKaartenDatabase() {
-        for (int i = 0; i < kaartenLijstSpelers.length; i++) {
-            kaartenLijstSpelers[i] = 1337;
+
+
+        Log.d("Log data: ", " haalt nu op uit db");
+
+        if (0 == 1){//TODO remove if
+            for (int i = 0; i < kaartenLijstSpelers.length; i++) {
+                kaartenLijstSpelers[i] = kaartenLijstSpelers[i]; //TODO de Json array in kaartenlijst zetten (dit ook elke 5 sec aanroepen)
+            }
         }
+
+        toonSpeelveld();
     }
 
     public void opleggen(View view) {
@@ -40,13 +51,15 @@ public class SpeelveldActivity extends AppCompatActivity {
     }
 
     private void setKaarten() {
+        // LOOP de hele kaarten ARRAY en SET als er een kaart is opgelegd
         for (int i = 0; i < kaartenLijstSpelers.length; i++) {
             if (kaartenLijstSpelers[i] != 16 && kaartenLijstSpelers[i] != 14) {
                 tempKaartenLijstSpelers[i] = 15;
-                Log.d("log data: ", i + " = 15");
             } else {
                 if(kaartenLijstSpelers[i] != 16) {
                     tempKaartenLijstSpelers[i] = 14;
+                } else {
+                    tempKaartenLijstSpelers[i] = 16;
                 }
             }
         }
@@ -55,8 +68,10 @@ public class SpeelveldActivity extends AppCompatActivity {
     private void toonSpeelveld() {
         setKaarten();
         if (toonKaarten) {
+            Log.d("Log data: ", " toonKaarten true");
             createSpeelveld(kaartenLijstSpelers);
         } else {
+            Log.d("Log data: ", " toonKaarten false");
             createSpeelveld(tempKaartenLijstSpelers);
         }
     }
@@ -72,8 +87,7 @@ public class SpeelveldActivity extends AppCompatActivity {
         adapter = new ImageAdapter(this);
         viewPager.setAdapter(adapter);
 
-        createSpeelveld(kaartenLijstSpelers);
-
+        getKaartenDatabase();
     }
 
     public void createSpeelveld(int[] kaartenLijstSpelers) {
@@ -109,8 +123,6 @@ public class SpeelveldActivity extends AppCompatActivity {
         Bitmap bitmap;
 
         for (int i = 0; i < kaartenLijstSpelers.length; i++) {
-            //Log.d("Log data:", String.valueOf(kaartenLijstSpelers[i]));
-
             bitmap = BitmapFactory.decodeResource(getResources(), kaartenLijst[kaartenLijstSpelers[i]]);
 
             switch (i) {
@@ -151,9 +163,6 @@ public class SpeelveldActivity extends AppCompatActivity {
             }
         }
 
-        //Bitmap bitmap = BitmapFactory.decodeResource(getResources(), kaartenLijst[kaartNummer]);
-
-
         TextView spelerNaam1 = (TextView) findViewById(R.id.spelerNaam1);
         TextView spelerNaam2 = (TextView) findViewById(R.id.spelerNaam2);
         TextView spelerNaam3 = (TextView) findViewById(R.id.spelerNaam3);
@@ -163,12 +172,10 @@ public class SpeelveldActivity extends AppCompatActivity {
         TextView spelerNaam7 = (TextView) findViewById(R.id.spelerNaam7);
         TextView spelerNaam8 = (TextView) findViewById(R.id.spelerNaam8);
 
-
         String print = "";
         for (String s : spelerLijst) {
             print += s;
         }
-
         spelerNaam1.setText(spelerLijst[0]);
         spelerNaam2.setText(spelerLijst[1]);
         spelerNaam3.setText(spelerLijst[2]);
