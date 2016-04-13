@@ -1,6 +1,8 @@
 package com.example.royadmiraal.planningpoker;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -8,45 +10,51 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.Arrays;
-import java.util.Objects;
 
 /**
  * Created by IPMEDT4 - Groep A on 04-04-16.
  */
 
-    //TODO namen en kaarten in en uit database
+//TODO namen en kaarten in en uit database
 
 
 public class SpeelveldActivity extends AppCompatActivity {
+    private static final String DEFAULT = "n/a";
     private String[] deelneemGegevens = {"naam", "Sessie id"};
-    public boolean toonKaarten = true; //TODO op false en alleen op true door scrum master of als de timer is afgelopen
-    private String[] spelerLijst = {"S.M. hier", "Collin Woerde", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", "Speler 8"};
+    public boolean toonKaarten = false; //TODO op true door scrum master of als de timer is afgelopen
+    private String[] spelerLijst = {"S.M. hier", "Speler 2", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", "Speler 8"};
     private int[] tempKaartenLijstSpelers = {14, 14, 14, 14, 14, 14, 14, 14};
     private int[] kaartenLijstSpelers = {14, 14, 14, 14, 14, 14, 14, 14};
     ImageView plek1, plek2, plek3, plek4, plek5, plek6, plek7, plek8;
     ImageAdapter adapter;
+    public int selectedCard;
+
+    private void setNaam() {
+        Log.d("log data: ", "ophalen naam");
+        SharedPreferences sharedPreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
+        String name = sharedPreferences.getString("gebruiker_naam", DEFAULT);
+            Log.d("log data: ", name);
+            spelerLijst[1] = name;
+    }
 
     private void getKaartenDatabase() {
 
 
         Log.d("Log data: ", "haalt nu op uit db");
 
-        if (0 == 1){//TODO remove if
-            for (int i = 0; i < kaartenLijstSpelers.length; i++) {
-                kaartenLijstSpelers[i] = kaartenLijstSpelers[i]; //TODO de Json array in kaartenlijst zetten (dit ook elke 5 sec aanroepen)
-            }
-        }
+
+            //for (int i = 0; i < kaartenLijstSpelers.length; i++) {
+            //    kaartenLijstSpelers[i] = kaartenLijstSpelers[i]; //TODO de Json array in kaartenlijst zetten (dit ook elke 5 sec aanroepen)
+            //}
+
 
         toonSpeelveld();
     }
 
     public void opleggen(View view) {
-        kaartenLijstSpelers[1] = ImageAdapter.getSelectedCard();
+        kaartenLijstSpelers[1] = selectedCard;
         toonSpeelveld();
     }
 
@@ -56,7 +64,7 @@ public class SpeelveldActivity extends AppCompatActivity {
             if (kaartenLijstSpelers[i] != 16 && kaartenLijstSpelers[i] != 14) {
                 tempKaartenLijstSpelers[i] = 15;
             } else {
-                if(kaartenLijstSpelers[i] != 16) {
+                if (kaartenLijstSpelers[i] != 16) {
                     tempKaartenLijstSpelers[i] = 14;
                 } else {
                     tempKaartenLijstSpelers[i] = 16;
@@ -68,10 +76,10 @@ public class SpeelveldActivity extends AppCompatActivity {
     private void toonSpeelveld() {
         setKaarten();
         if (toonKaarten) {
-            Log.d("Log data: ", "toonKaarten true");
+            //Log.d("Log data: ", "toonKaarten true");
             createSpeelveld(kaartenLijstSpelers);
         } else {
-            Log.d("Log data: ", "toonKaarten false");
+            //Log.d("Log data: ", "toonKaarten false");
             createSpeelveld(tempKaartenLijstSpelers);
         }
     }
@@ -79,13 +87,36 @@ public class SpeelveldActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_speelveld);
-        Intent intent = getIntent();
-        deelneemGegevens = intent.getStringArrayExtra("strings");
+        //Intent intent = getIntent();
+        //deelneemGegevens = intent.getStringArrayExtra("strings");
         //spelerLijst[1] = deelneemGegevens[0];
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
         adapter = new ImageAdapter(this);
         viewPager.setAdapter(adapter);
+
+        setNaam();
+
+
+        // Een listener voor het ophalen van de geselceteerde kaart
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int cardNumber) {
+                selectedCard = cardNumber;
+                //De geselecteerde kaart in cardNummer zetten
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
         getKaartenDatabase();
     }

@@ -1,6 +1,7 @@
 package com.example.royadmiraal.planningpoker;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -15,7 +16,6 @@ import java.util.Objects;
  */
 
 public class ImageAdapter extends PagerAdapter{
-    private static int selectedCard;
     Context context;
     public int[] GalImages = new int[] {
             R.drawable.kaart0,                      // array nr. 0 = kaart  0
@@ -56,10 +56,6 @@ public class ImageAdapter extends PagerAdapter{
         imageView.setPadding(padding, padding, padding, padding);
         imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         imageView.setImageResource(GalImages[position]);
-
-        Log.d("Log data: ", "Position " + position);
-
-        setSelectedCard(position);
         ((ViewPager) container).addView(imageView, 0);
 
         return imageView;
@@ -80,12 +76,4 @@ public class ImageAdapter extends PagerAdapter{
 
     }
 
-    public static int getSelectedCard() {
-        return selectedCard;
-    }
-
-    public void setSelectedCard(int
-                                        electedCard) {
-        this.selectedCard = selectedCard;
-    }
 }

@@ -50,15 +50,13 @@ public class DeelnemenActivity extends AppCompatActivity{
     }
 
     public void doorgaanSpeelveld(View view){
-
-        EditText invoerNaam = (EditText)findViewById(R.id.invoerNaam);
         EditText sessieId = (EditText)findViewById(R.id.privateKey);
 
 
-        Intent intent = new Intent(DeelnemenActivity.this, SpeelveldActivity.class);
-        String[] deelneemGegevens = new String[] {invoerNaam.getText().toString(),sessieId.getText().toString() };
-        intent.putExtra("strings", deelneemGegevens);
-        startActivity(intent);
+        //Intent intent = new Intent(DeelnemenActivity.this, SpeelveldActivity.class);
+        //String[] deelneemGegevens = new String[] {invoerNaam.getText().toString(),sessieId.getText().toString() };
+        //intent.putExtra("strings", deelneemGegevens);
+        //startActivity(intent);
 
 
         Log.d("invoerNaam", "naam wordt geregistreerd");
