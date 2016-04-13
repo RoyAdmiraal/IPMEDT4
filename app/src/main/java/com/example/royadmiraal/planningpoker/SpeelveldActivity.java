@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by IPMEDT4 - Groep A on 04-04-16.
@@ -29,6 +30,7 @@ public class SpeelveldActivity extends AppCompatActivity {
     private int[] kaartenLijstSpelers = {14, 14, 14, 14, 14, 14, 14, 14};
     ImageView plek1, plek2, plek3, plek4, plek5, plek6, plek7, plek8;
     ImageAdapter adapter;
+    TextView taakOmschrijving;
     public int selectedCard;
 
     private void setNaam() {
@@ -82,6 +84,7 @@ public class SpeelveldActivity extends AppCompatActivity {
             //Log.d("Log data: ", "toonKaarten false");
             createSpeelveld(tempKaartenLijstSpelers);
         }
+
     }
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +99,7 @@ public class SpeelveldActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
         setNaam();
+       // ophalenTaak();
 
 
         // Een listener voor het ophalen van de geselceteerde kaart
@@ -218,4 +222,22 @@ public class SpeelveldActivity extends AppCompatActivity {
 
 
     }
+/*
+    private void ophalenTaak() {
+        SharedPreferences sharedPreferences = getSharedPreferences("TaakData", Context.MODE_PRIVATE);
+        String naam = sharedPreferences.getString("taak_naam", DEFAULT);
+        String beschrijving = sharedPreferences.getString("taak_beschrijving", DEFAULT);
+
+
+        Log.d("data", naam);
+        Log.d("data", beschrijving);
+
+
+        if(naam.equals(DEFAULT)){
+            Toast.makeText(this, "Taak niet geladen", Toast.LENGTH_LONG).show();
+        } else {
+            taakOmschrijving.setText(naam + "/n" +beschrijving);
+        }
+    }*/
+
 }
