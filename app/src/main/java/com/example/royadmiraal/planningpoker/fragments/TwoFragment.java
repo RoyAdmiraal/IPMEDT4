@@ -1,4 +1,4 @@
-package com.example.royadmiraal.planningpoker;
+package com.example.royadmiraal.planningpoker.fragments;
 
 /**
  * Created by Collin on 7-4-2016.
@@ -9,6 +9,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.royadmiraal.planningpoker.R;
 
 public class TwoFragment extends Fragment{
 

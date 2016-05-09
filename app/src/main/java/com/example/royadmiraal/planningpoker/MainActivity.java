@@ -5,29 +5,25 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.method.PasswordTransformationMethod;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.royadmiraal.planningpoker.models.Gebruiker;
+
 public class MainActivity extends AppCompatActivity {
     private static final String DEFAULT = "N/A";
-    private int volgendeId = 1;
-    private String gebruikerNaam;
     TextView welkom;
+    Gebruiker gebruiker = new Gebruiker();
 
     @Override
-      protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -42,17 +38,20 @@ public class MainActivity extends AppCompatActivity {
         final EditText gebruiker_naam = (EditText) alertLayout.findViewById(R.id.gebruiker_naam);
 
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle("U eerste keer Planning Poker!");
+        alert.setTitle("De eerste keer bij de Planning Poker App!");
         alert.setView(alertLayout);
         alert.setCancelable(false);
         alert.setPositiveButton("Opslaan", new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                gebruikerNaam = gebruiker_naam.getText().toString();
+                gebruiker.setGebruikerNaam(gebruiker_naam.getText().toString());
+
                 //TODO kijken in db welke gebruiker_id hij krijgt
-                welkom.setText("Welkom bij de Planning Poker app " + gebruikerNaam + "!");
-                opslaanNaam();
+                opslaanGebruikerDatabase();
+                opslaanNaamShared();
+
+                welkom.setText("Welkom bij de Planning Poker app " + gebruiker.getGebruikerNaam() + "!");
             }
         });
         AlertDialog dialog = alert.create();
@@ -60,21 +59,29 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void opslaanGebruikerDatabase() {
+
+
+        gebruiker.setGebruikerId(0);
+    }
+
     private void ophalenNaam() {
         SharedPreferences sharedPreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
         String name = sharedPreferences.getString("gebruiker_naam", DEFAULT);
-        if(name.equals(DEFAULT)){
+        if (name.equals(DEFAULT)) {
             toonNaamDialog();
         } else {
-            welkom.setText("Welkom bij de Planning Poker app " + name + "!");
+            gebruiker.setGebruikerNaam(name);
+            toonNaamDialog(); // TODO nog weghalen....
+            welkom.setText("Welkom bij de Planning Poker app " + gebruiker.getGebruikerNaam() + "!");
         }
     }
 
-    private void opslaanNaam() {
+    private void opslaanNaamShared() {
         SharedPreferences sharedPreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("gebruiker_id", volgendeId);
-        editor.putString("gebruiker_naam", gebruikerNaam);
+        editor.putInt("gebruiker_id", gebruiker.getGebruikerId());
+        editor.putString("gebruiker_naam", gebruiker.getGebruikerNaam());
         editor.commit();
 
         Toast.makeText(this, "Naam succesvol opgeslagen!", Toast.LENGTH_LONG).show();

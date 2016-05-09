@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 /**
- * Created by Collin on 27-3-2016.
+ * Created by Groep A on 27-3-2016.
  */
 
 public class HelpActivity extends Activity {
@@ -21,15 +21,6 @@ public class HelpActivity extends Activity {
         setContentView(R.layout.activity_help);
 
     }
-
-    /* GEEFT FOUTMELDING
-    LINK TOT POGING OM TE LATEN WERKEN
-    http://stackoverflow.com/questions/1748977/making-textview-scrollable-in-android
-
-    final TextView textView2 = new TextView(this);
-    textView2.setMovementMethod(new ScrollingMovementMethod());
-    */
-
-    }
+}
 
 

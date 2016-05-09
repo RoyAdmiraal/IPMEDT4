@@ -15,7 +15,7 @@ import com.example.royadmiraal.planningpoker.models.Sessie;
 public class SessieEigenschappenActivity extends AppCompatActivity {
 
 
-    EditText taakNaam1, taakOmschrijving1;
+    private  EditText taakNaam1, taakOmschrijving1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -15,6 +15,16 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.example.royadmiraal.planningpoker.fragments.EightFragment;
+import com.example.royadmiraal.planningpoker.fragments.FiveFragment;
+import com.example.royadmiraal.planningpoker.fragments.FourFragment;
+import com.example.royadmiraal.planningpoker.fragments.NineFragment;
+import com.example.royadmiraal.planningpoker.fragments.OneFragment;
+import com.example.royadmiraal.planningpoker.fragments.SevenFragment;
+import com.example.royadmiraal.planningpoker.fragments.SixFragment;
+import com.example.royadmiraal.planningpoker.fragments.TenFragment;
+import com.example.royadmiraal.planningpoker.fragments.ThreeFragment;
+import com.example.royadmiraal.planningpoker.fragments.TwoFragment;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -25,7 +35,7 @@ import java.util.List;
 public class ResultatenActivity extends AppCompatActivity {
 
     private RequestQueue requestQueue;
-    String getResultatenUrl = "http://192.168.56.1/ipmedt4/getResultaten.php";
+    private String getResultatenUrl = "http://collinwoerde.nl/ipmedt/getResultaten.php";
 
 
     private int gebruikerId;

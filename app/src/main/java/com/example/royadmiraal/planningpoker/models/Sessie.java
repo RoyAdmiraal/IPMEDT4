@@ -1,15 +1,22 @@
 package com.example.royadmiraal.planningpoker.models;
 
-/**
- * Created by Collin on 4-4-2016.
- */
 public class Sessie {
-    private int id;
-    //private boolean isClosed = Fa
+    private int sessieId;
+    private String sessieNaam;
 
-    public Sessie() {
-
+    public int getSessieId() {
+        return sessieId;
     }
 
+    public void setSessieId(int sessieId) {
+        this.sessieId = sessieId;
+    }
 
+    public String getSessieNaam() {
+        return sessieNaam;
+    }
+
+    public void setSessieNaam(String sessieNaam) {
+        this.sessieNaam = sessieNaam;
+    }
 }

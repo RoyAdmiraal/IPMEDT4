@@ -1,7 +1,7 @@
-package com.example.royadmiraal.planningpoker;
+package com.example.royadmiraal.planningpoker.fragments;
 
 /**
- * Created by Collin on 7-4-2016.
+ * Created by Groep A on 7-4-2016.
  */
 
 import android.os.Bundle;
@@ -10,12 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-//import info.androidhive.materialtabs.R;
+import com.example.royadmiraal.planningpoker.R;
 
+public class FiveFragment extends Fragment{
 
-public class SixFragment extends Fragment{
-
-    public SixFragment() {
+    public FiveFragment() {
         // Required empty public constructor
     }
 
@@ -28,7 +27,7 @@ public class SixFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_six, container, false);
+        return inflater.inflate(R.layout.fragment_five, container, false);
     }
 
 }

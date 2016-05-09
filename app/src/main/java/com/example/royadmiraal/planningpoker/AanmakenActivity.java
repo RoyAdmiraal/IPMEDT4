@@ -13,13 +13,7 @@ public class AanmakenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aanmaken);
         //createUser();
-        createSessie();
-    }
-
-    private void createSessie() {
-        //aanmaken in database dmv api
-
-        // object mee geven aan sessie eigenschappen
+        //createSessie();
     }
 
     public void doorgaanSessieEigenschappen(View view) {
