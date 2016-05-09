@@ -30,6 +30,7 @@ public class SpeelveldActivity extends AppCompatActivity {
     ImageView plek1, plek2, plek3, plek4, plek5, plek6, plek7, plek8;
     ImageAdapter adapter;
     public int selectedCard;
+    //TextView huidigeKaartNaam;
 
     private void setNaam() {
         Log.d("log data: ", "ophalen naam");
@@ -109,8 +110,10 @@ public class SpeelveldActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int cardNumber) {
                 selectedCard = cardNumber;
-                //De geselecteerde kaart in cardNummer zetten
+
+            huidigeKaart();
             }
+
 
             @Override
             public void onPageScrollStateChanged(int state) {
@@ -119,6 +122,14 @@ public class SpeelveldActivity extends AppCompatActivity {
         });
 
         getKaartenDatabase();
+    }
+
+    private void huidigeKaart() {
+
+        TextView huidigeKaartNaam = (TextView) findViewById(R.id.huidigeKaart);
+       // huidigeKaartNaam.findViewById(R.id.huidigeKaart);
+        huidigeKaartNaam.setText((selectedCard +1) + " van de 14");
+
     }
 
     public void createSpeelveld(int[] kaartenLijstSpelers) {
