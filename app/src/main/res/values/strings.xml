@@ -66,23 +66,23 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
-    <string name="fragment_one">
-        Splash screen ontwerpen\n
-        Splash screen in high fidelity.\n
-        Omdat het geen moeilijke taak voor de ontwerper is.\n
-        Resultaat: <b>2.</b>\n
-        \n\n
-        Splash screen realiseren\n
-        Het volledige splash screen werkend in de app.\n
-        Er moet gewacht worden op het design vervolgens is het programmeer werk niet heel moeilijk.\n
-        Resultaat: <b>20.</b>\n
-        \n\n
-        Deelnemen sessie\n
-        Deelnemen sessie werkend maken.\n
-        Geen.\n
-        Resultaat: <b>5.</b>\n
-        \n\n
-    </string>
+    <string-array name="fragment_one">
+        <item>@string/item1</item>
+        <item>@string/item2</item>
+        <item>@string/item3</item>
+        <item>@string/item4</item>
+        <item>@string/witregel</item>
+        <item>@string/item5</item>
+        <item>@string/item6</item>
+        <item>@string/item7</item>
+        <item>@string/item8</item>
+        <item>@string/witregel</item>
+        <item>@string/item9</item>
+        <item>@string/item10</item>
+        <item>@string/item11</item>
+        <item>@string/item12</item>
+    </string-array>
+
     <string name="fragment_two">
         Splash screen ontwerpen\n
         Splash screen in high fidelity.\n
@@ -100,6 +100,7 @@
         Resultaat: <b>5.</b>\n
         \n\n
     </string>
+
     <string name="fragment_three">
         Taak 1\n
         beschijving taak 1\n
