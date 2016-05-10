@@ -61,7 +61,7 @@
     <string name="title_activity_resultaten">Resultaten Sessie</string>
     <string name="title_activity_aanmaken">Aanmaken Sessie</string>
     <string name="title_activity_deelnemen">Deelnemen Sessie</string>
-    <string name="title_activity_deelnemenSpeelveld">Naam ronde hier</string>
+    <string name="title_activity_deelnemenSpeelveld">Ronde 1</string>
 
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
