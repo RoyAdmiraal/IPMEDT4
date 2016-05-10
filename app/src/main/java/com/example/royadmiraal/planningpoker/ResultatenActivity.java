@@ -31,12 +31,15 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ResultatenActivity extends AppCompatActivity {
 
     private RequestQueue requestQueue;
-    private String getResultatenUrl = "http://collinwoerde.nl/ipmedt4/getResultaten.php";
+    //private String getResultatenUrl = "http://collinwoerde.nl/ipmedt4/getResultaten.php";
+    private String getResultatenUrl = "http://192.168.141.1/ipmedt4/getResultaten.php";
 
 
     private int gebruikerId;
@@ -50,8 +53,24 @@ public class ResultatenActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private Object results;
 
+    private String sessieNaam1;
+    private String sessieNaam2;
+    private String sessieNaam3;
+    private String sessieNaam4;
+    private String sessieNaam5;
+    private String sessieNaam6;
+    private String sessieNaam7;
+    private String sessieNaam8;
+    private String sessieNaam9;
+    private String sessieNaam10;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        gebruikerId = MainActivity.gebruiker.getId();
+
+        Log.d("Log data: ", "GebruikerId: "+gebruikerId+"");
 
         requestQueue = Volley.newRequestQueue(getApplicationContext());
 
@@ -81,63 +100,83 @@ public class ResultatenActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new OneFragment(), "Final sprint april");
         adapter.addFrag(new TwoFragment(), "Sprint 2 april test");
-        adapter.addFrag(new ThreeFragment(), "");
-        adapter.addFrag(new FourFragment(), "");
-        adapter.addFrag(new FiveFragment(), "");
-        adapter.addFrag(new SixFragment(), "");
-        adapter.addFrag(new SevenFragment(), "");
-        adapter.addFrag(new EightFragment(), "");
-        adapter.addFrag(new NineFragment(), "");
-        adapter.addFrag(new TenFragment(), "");
+        adapter.addFrag(new ThreeFragment(), sessieNaam3);
+        adapter.addFrag(new FourFragment(), sessieNaam4);
+        adapter.addFrag(new FiveFragment(), sessieNaam5);
+        adapter.addFrag(new SixFragment(), sessieNaam6);
+        adapter.addFrag(new SevenFragment(), sessieNaam7);
+        adapter.addFrag(new EightFragment(), sessieNaam8);
+        adapter.addFrag(new NineFragment(), sessieNaam9);
+        adapter.addFrag(new TenFragment(), sessieNaam10);
 
         viewPager.setAdapter(adapter);
     }
 
     public Object getResults() {
-        Log.d("Log data: SessieId", "test");
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, getResultatenUrl, (String) null, new Response.Listener<JSONObject>() {
 
             @Override
             public void onResponse(JSONObject response) {
                 try {
                     JSONArray sessies = response.getJSONArray("sessies");
-
                     for (int i = 0; i < sessies.length(); i++) {
                         JSONObject sessie = sessies.getJSONObject(i);
-                        String sessieId = sessie.getString("gbr_sessie_sessie_id");
-                    }
-
-                } catch (Exception e) {
-
-                }
-
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.d("Log data: ", error.toString());
-            }
-        });
-        requestQueue.add(jsonObjectRequest);
-
-
-        return results;
-    }
-
-    public void getTest() {
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, getResultatenUrl, (String) null, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                try {
-                    JSONArray sessies = response.getJSONArray("sessies");
-
-                    for (int i = 0; i < sessies.length(); i++) {
-                        JSONObject sessie = sessies.getJSONObject(i);
-
                         String sessieId = sessie.getString("gbr_sessie_sessie_id");
 
                         Log.d("Log data: ", sessieId);
                     }
+
+                    JSONArray JSresultaat = response.getJSONArray("resultaat");
+
+                    //aantalSessieResultaten = JSresultaat.length();
+
+
+                    for (int i = 0; i < JSresultaat.length(); i++) {
+                        JSONObject resultaat = JSresultaat.getJSONObject(i);
+
+                        String naamSessieTest = resultaat.getString("sessie_naam");
+
+                        Log.d("Log data: ", naamSessieTest);
+
+                        switch (i) {
+                            case 0:
+                                sessieNaam1 = "Final sprint april";
+                                //sessieNaam1 = resultaat.getString("sessie_naam");
+                                break;
+                            case 1:
+                                sessieNaam2 = "Sprint 2 april test";
+                                //sessieNaam2 = resultaat.getString("sessie_naam");
+                                break;
+                            case 2:
+                                sessieNaam3 = resultaat.getString("sessie_naam");
+                                break;
+                            case 3:
+                                sessieNaam4 = resultaat.getString("sessie_naam");
+                                break;
+                            case 4:
+                                sessieNaam5 = resultaat.getString("sessie_naam");
+                                break;
+                            case 5:
+                                sessieNaam6 = resultaat.getString("sessie_naam");
+                                break;
+                            case 6:
+                                sessieNaam7 = resultaat.getString("sessie_naam");
+                                break;
+                            case 7:
+                                sessieNaam8 = resultaat.getString("sessie_naam");
+                                break;
+                            case 8:
+                                sessieNaam9 = resultaat.getString("sessie_naam");
+                                break;
+                            case 9:
+                                sessieNaam10 = resultaat.getString("sessie_naam");
+                                break;
+                            default:
+                                Log.d("Log data: ", "Wut");
+                        }
+                    }
+
+
                 } catch (Exception e) {
 
                 }
@@ -148,10 +187,18 @@ public class ResultatenActivity extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Log.d("Log data: ", error.toString());
             }
-        });
-
-        Log.d("Is deze NULL ??? ", " Ermm .. Dus : " + requestQueue);
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("gebruikerId", 1+"");
+                return params;
+            }
+        };
         requestQueue.add(jsonObjectRequest);
+
+        return results;
+
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {

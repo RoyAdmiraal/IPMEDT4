@@ -8,8 +8,11 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require 'connection.php';
+    
+    $gebruikerId = $_POST['gebruikerId'];
+    
 
-    getSessies(1);
+    getSessies($gebruikerId);
     getResultaten();
     mysqli_close($connect);
 }
@@ -44,8 +47,8 @@ function getSessies($gebruikerId) {
     $sessies = array_column($temp_sessies, 'gbr_sessie_sessie_id');
 
     // Array bekijken voor het testen
-    // print_r($sessies);
-    // header('Content-Type: application/json');
+    //print_r($sessies);
+    //header('Content-Type: application/json');
     echo json_encode(array("sessies" => $temp_sessies));
 }
 
@@ -54,7 +57,6 @@ function getResultaten() {
 
     foreach ($sessies as $sessie) {
         echo "\n";
-		//echo $sessie;
         getSessieResultaat($sessie);
     }
 }
@@ -91,11 +93,11 @@ function getSessieResultaat($sessieId) {
         $temp_gebruikerSessies = "Er zijn geen resultaten";
     }
 
-    $gebruikerSessies = array_column($temp_gebruikerSessies, 'sessie_id');
+    //$gebruikerSessies = array_column($temp_gebruikerSessies, 'sessie_id');
 
     // Array bekijken voor het testen
     //print_r($temp_gebruikerSessies);
     
-    //header('Content-Type: application/json');
-    echo json_encode(array("resultaat" . $sessieId => $temp_gebruikerSessies));
+    //header('Content-Type: application/json');sessie_naam
+    echo json_encode(array("resultaat" => $temp_gebruikerSessies));
 }
