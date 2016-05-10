@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             toonNaamDialog();
         } else {
             gebruiker.setNaam(name);
-            toonNaamDialog(); // TODO nog weghalen....
+            //toonNaamDialog(); // TODO nog weghalen....
             welkom.setText("Welkom bij de Planning Poker app " + gebruiker.getNaam() + "!");
         }
     }
