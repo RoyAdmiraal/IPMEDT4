@@ -45,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                gebruiker.setGebruikerNaam(gebruiker_naam.getText().toString());
+                gebruiker.setNaam(gebruiker_naam.getText().toString());
 
                 //TODO kijken in db welke gebruiker_id hij krijgt
                 opslaanGebruikerDatabase();
                 opslaanNaamShared();
 
-                welkom.setText("Welkom bij de Planning Poker app " + gebruiker.getGebruikerNaam() + "!");
+                welkom.setText("Welkom bij de Planning Poker app " + gebruiker.getNaam() + "!");
             }
         });
         AlertDialog dialog = alert.create();
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     private void opslaanGebruikerDatabase() {
 
 
-        gebruiker.setGebruikerId(0);
+        gebruiker.setId(0);
     }
 
     private void ophalenNaam() {
@@ -71,17 +71,17 @@ public class MainActivity extends AppCompatActivity {
         if (name.equals(DEFAULT)) {
             toonNaamDialog();
         } else {
-            gebruiker.setGebruikerNaam(name);
+            gebruiker.setNaam(name);
             toonNaamDialog(); // TODO nog weghalen....
-            welkom.setText("Welkom bij de Planning Poker app " + gebruiker.getGebruikerNaam() + "!");
+            welkom.setText("Welkom bij de Planning Poker app " + gebruiker.getNaam() + "!");
         }
     }
 
     private void opslaanNaamShared() {
         SharedPreferences sharedPreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("gebruiker_id", gebruiker.getGebruikerId());
-        editor.putString("gebruiker_naam", gebruiker.getGebruikerNaam());
+        editor.putInt("gebruiker_id", gebruiker.getId());
+        editor.putString("gebruiker_naam", gebruiker.getNaam());
         editor.commit();
 
         Toast.makeText(this, "Naam succesvol opgeslagen!", Toast.LENGTH_LONG).show();

@@ -21,22 +21,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Uw naam"
-        android:ems="10"
-        android:id="@+id/invoerNaam"
-        android:layout_below="@+id/imageView2"
-        android:layout_alignLeft="@+id/sessieNaam"
-        android:layout_alignStart="@+id/sessieNaam" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:hint="Sessie naam"
         android:ems="10"
         android:id="@+id/sessieNaam"
-        android:layout_below="@+id/invoerNaam"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView2" />
 
 
     <TextView
@@ -53,9 +42,8 @@
         android:text="Doorgaan"
         android:id="@+id/doorgaanButton"
         android:onClick="doorgaanSessieEigenschappen"
-        android:layout_below="@+id/sessieNaam"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

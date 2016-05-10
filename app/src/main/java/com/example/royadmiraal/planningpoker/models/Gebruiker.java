@@ -1,22 +1,31 @@
 package com.example.royadmiraal.planningpoker.models;
 
 public class Gebruiker {
-    private int gebruikerId;
-    private String gebruikerNaam;
+    private int id;
+    private String naam;
+    private int huidigeKaart;
 
-    public int getGebruikerId() {
-        return gebruikerId;
+    public int getHuidigeKaart() {
+        return huidigeKaart;
     }
 
-    public void setGebruikerId(int gebruikerId) {
-        this.gebruikerId = gebruikerId;
+    public void setHuidigeKaart(int huidigeKaart) {
+        this.huidigeKaart = huidigeKaart;
     }
 
-    public String getGebruikerNaam() {
-        return gebruikerNaam;
+    public int getId() {
+        return id;
     }
 
-    public void setGebruikerNaam(String gebruikerNaam) {
-        this.gebruikerNaam = gebruikerNaam;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNaam() {
+        return naam;
+    }
+
+    public void setNaam(String naam) {
+        this.naam = naam;
     }
 }
