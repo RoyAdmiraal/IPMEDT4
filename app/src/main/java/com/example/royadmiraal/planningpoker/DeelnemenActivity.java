@@ -1,23 +1,26 @@
 package com.example.royadmiraal.planningpoker;
 
 import android.content.Intent;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.EditText;
 
-public class DeelnemenActivity extends AppCompatActivity {
+
+public class DeelnemenActivity extends AppCompatActivity{
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deelnemen);
+
+
     }
 
     @Override
@@ -46,18 +49,22 @@ public class DeelnemenActivity extends AppCompatActivity {
         }
     }
 
-    public void doorgaanSpeelveld(View view) {
+    public void doorgaanSpeelveld(View view){
+        EditText sessieId = (EditText)findViewById(R.id.privateKey);
 
-        EditText invoerNaam = (EditText)findViewById(R.id.invoerNaam);
-        EditText privateKey = (EditText)findViewById(R.id.privateKey);
 
-        Intent intent = new Intent(DeelnemenActivity.this, SpeelveldActivity.class);
-        intent.putExtra("invoerNaam", invoerNaam.getText().toString());
-        intent.putExtra("privateKey", privateKey.getText().toString());
+        //Intent intent = new Intent(DeelnemenActivity.this, SpeelveldActivity.class);
+        //String[] deelneemGegevens = new String[] {invoerNaam.getText().toString(),sessieId.getText().toString() };
+        //intent.putExtra("strings", deelneemGegevens);
+        //startActivity(intent);
+
 
         Log.d("invoerNaam", "naam wordt geregistreerd");
-        Log.d("privateKey", "PIN komt door");
+        Log.d("SessieId", "PIN komt door");
 
         startActivity(new Intent(DeelnemenActivity.this, SpeelveldActivity.class));
     }
+
+
+
 }

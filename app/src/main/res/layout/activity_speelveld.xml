@@ -1,212 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:weightSum="1"
-    android:background="@color/colorPrimary">
+    android:background="#81c0e0"
+    android:weightSum="1">
 
 
-
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/GridLayout1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:columnCount="7"
-    android:rowCount="5"
-    android:orientation="horizontal"
-    tools:context="com.example.royadmiraal.planningpoker.SpeelveldActivity"
-    android:layout_marginTop="150dp"
-    android:layout_marginLeft="40dp">
-
-    <ImageView
-        style="@style/kaart"
-        android:id="@+id/plek1"
-        android:padding="0.5dp"
-        android:gravity="top"
-        android:scaleType="centerCrop"
-        android:cropToPadding="true"
-        android:layout_row="0"
-        android:layout_column="0" />
-
-    <ImageView
-        style="@style/kaart"
-        android:id="@+id/plek2"
-        android:gravity="top"
-        android:padding="0.5dp"
-        android:scaleType="centerCrop"
-        android:cropToPadding="true"
-        android:layout_row="0"
-        android:layout_column="1" />
-
-    <ImageView
-        style="@style/kaart"
-        android:id="@+id/plek3"
-        android:padding="0.5dp"
-        android:gravity="top"
-        android:scaleType="centerCrop"
-        android:cropToPadding="true"
-        android:layout_marginBottom="15dp"
-        android:layout_row="0"
-        android:layout_column="2" />
-
-    <ImageView
-        style="@style/kaart"
-        android:id="@+id/plek4"
-        android:padding="0.5dp"
-        android:gravity="top"
-        android:scaleType="centerCrop"
-        android:cropToPadding="true"
-        android:layout_marginBottom="15dp"
-        android:layout_row="0"
-        android:layout_column="3" />
-
-    <ImageView
-        style="@style/kaart"
-        android:id="@+id/plek5"
-        android:gravity="top"
-        android:padding="0.5dp"
-        android:scaleType="centerCrop"
-        android:cropToPadding="true"
-        android:layout_marginRight="20dp"
-        android:layout_row="2"
-        android:layout_column="0" />
-
-    <ImageView
-        style="@style/kaart"
-        android:id="@+id/plek6"
-        android:padding="0.5dp"
-        android:gravity="top"
-        android:scaleType="centerCrop"
-        android:cropToPadding="true"
-        android:layout_marginBottom="15dp"
-        android:layout_marginRight="20dp"
-        android:layout_row="2"
-        android:layout_column="1" />
-
-    <ImageView
-        style="@style/kaart"
-        android:id="@+id/plek7"
-        android:padding="0.5dp"
-        android:gravity="top"
-        android:scaleType="centerCrop"
-        android:cropToPadding="true"
-        android:layout_marginRight="20dp"
-        android:layout_row="2"
-        android:layout_column="2" />
-
-    <ImageView
-        style="@style/kaart"
-        android:id="@+id/plek8"
-        android:padding="0.5dp"
-        android:gravity="top"
-        android:scaleType="centerCrop"
-        android:cropToPadding="true"
-        android:layout_marginRight="20dp"
-        android:layout_row="2"
-        android:layout_column="3" />
-
-
-    <TextView
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/GridLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/spelerNaam1"
-        android:layout_row="1"
-        android:layout_column="0"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="-10dp" />
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="150dp"
+        android:columnCount="7"
+        android:orientation="horizontal"
+        android:rowCount="12"
+        tools:context="com.example.royadmiraal.planningpoker.SpeelveldActivity">
 
+        <ImageView
+            android:id="@+id/plek1"
+            style="@style/kaart"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:cropToPadding="true"
+            android:gravity="top"
+            android:padding="0.5dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/plek2"
+            style="@style/kaart"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:cropToPadding="true"
+            android:gravity="top"
+            android:padding="0.5dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/plek3"
+            style="@style/kaart"
+            android:layout_column="2"
+            android:layout_marginBottom="15dp"
+            android:layout_row="0"
+            android:cropToPadding="true"
+            android:gravity="top"
+            android:padding="0.5dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/plek4"
+            style="@style/kaart"
+            android:layout_column="3"
+            android:layout_marginBottom="15dp"
+            android:layout_row="0"
+            android:cropToPadding="true"
+            android:gravity="top"
+            android:padding="0.5dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/plek5"
+            style="@style/kaart"
+            android:layout_column="0"
+            android:layout_marginRight="20dp"
+            android:layout_row="2"
+            android:cropToPadding="true"
+            android:gravity="top"
+            android:padding="0.5dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/plek6"
+            style="@style/kaart"
+            android:layout_column="1"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_row="2"
+            android:cropToPadding="true"
+            android:gravity="top"
+            android:padding="0.5dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/plek7"
+            style="@style/kaart"
+            android:layout_column="2"
+            android:layout_marginRight="20dp"
+            android:layout_row="2"
+            android:cropToPadding="true"
+            android:gravity="top"
+            android:padding="0.5dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/plek8"
+            style="@style/kaart"
+            android:layout_column="3"
+            android:layout_marginRight="20dp"
+            android:layout_row="2"
+            android:cropToPadding="true"
+            android:gravity="top"
+            android:padding="0.5dp"
+            android:scaleType="centerCrop" />
+
+
+        <TextView
+            android:id="@+id/spelerNaam1"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-10dp"
+            android:layout_row="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+
+
+        <TextView
+            android:id="@+id/spelerNaam2"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-10dp"
+            android:layout_row="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/spelerNaam3"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-10dp"
+            android:layout_row="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/spelerNaam4"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-10dp"
+            android:layout_row="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/spelerNaam5"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-10dp"
+            android:layout_row="3"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/spelerNaam6"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-10dp"
+            android:layout_row="3"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/spelerNaam7"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-10dp"
+            android:layout_row="3"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/spelerNaam8"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-10dp"
+            android:layout_row="3"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="14dp" />
+    </GridLayout>
 
     <TextView
+        android:id="@+id/taakOmschrijving"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/spelerNaam2"
-        android:layout_row="1"
-        android:layout_column="1"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="-10dp" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:text="Hier komt de taak te staan" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/spelerNaam3"
-        android:layout_row="1"
-        android:layout_column="2"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="-10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/spelerNaam4"
-        android:layout_row="1"
-        android:layout_column="3"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="-10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/spelerNaam5"
-        android:layout_row="3"
-        android:layout_column="0"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="-10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/spelerNaam6"
-        android:layout_row="3"
-        android:layout_column="1"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="-10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/spelerNaam7"
-        android:layout_row="3"
-        android:layout_column="2"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="-10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/spelerNaam8"
-        android:layout_row="3"
-        android:layout_column="3"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="-10dp" />
-
-</GridLayout>
+        android:layout_marginTop="55dp"
+        android:text="00:00:31"
+        android:layout_below="@+id/taakOmschrijving"
+        android:layout_centerHorizontal="true"
+        android:textSize="12dp" />
 
     <Button
-        android:layout_width="92dp"
-        android:layout_height="wrap_content"
-        android:text="Kaart opleggen"
         android:id="@+id/opleggenKaartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="36dp"
         android:onClick="opleggen"
-        android:layout_marginRight="500dp"
-        android:gravity="center_horizontal"
-        android:layout_gravity="bottom" />
+        android:text="Kies"
+        android:layout_marginRight="16dp" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/scrumbutton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="222dp"
+        android:src="@drawable/scrumbutton" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/GridLayout1"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
+        android:longClickable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="1 van de 14 "
+        android:id="@+id/huidigeKaart"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="47dp"/>
+</RelativeLayout>
 

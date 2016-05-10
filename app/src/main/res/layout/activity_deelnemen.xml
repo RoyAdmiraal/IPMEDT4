@@ -9,17 +9,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.royadmiraal.planningpoker.DeelnemenActivity">
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Uw naam"
-        android:ems="10"
-        android:id="@+id/invoerNaam"
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/planningpokerlogo"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="146dp" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -28,8 +24,8 @@
         android:hint="Sessie pin"
         android:ems="10"
         android:id="@+id/privateKey"
-        android:layout_below="@+id/invoerNaam"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginTop="180dp" />
 
     <Button
         style="@style/Button"
@@ -37,10 +33,10 @@
         android:layout_height="wrap_content"
         android:text="Deelnemen sessie"
         android:id="@+id/btnDoorgaanSpeelveld"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="74dp"
-        android:onClick="doorgaanSpeelveld"  />
+        android:onClick="doorgaanSpeelveld"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/privateKey"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"

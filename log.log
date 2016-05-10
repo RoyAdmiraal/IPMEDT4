@@ -1,0 +1,108 @@
+*   2780cbd was CollinNL, 4 hours ago, message: Merge pull request #21 from RoyAdmiraal/r11
+|\  
+| * e34542d was RoyAdmiraal, 4 hours ago, message: toevoegen taak
+* |   602774c was CollinNL, 4 hours ago, message: Merge pull request #20 from RoyAdmiraal/r11
+|\ \  
+| |/  
+| * f45f17c was RoyAdmiraal, 4 hours ago, message: taak toevoegen
+* |   5a81fdc was CollinNL, 4 hours ago, message: Merge pull request #19 from RoyAdmiraal/c13
+|\ \  
+| |/  
+|/|   
+| * 0d4dc56 was collinnl, 4 hours ago, message: Laatste aanpassingen in speelveld en deelnemen geupdate
+|/  
+*   27aa1a8 was CollinNL, 24 hours ago, message: Merge pull request #18 from RoyAdmiraal/c12
+|\  
+| * ee0143a was collinnl, 24 hours ago, message: Laatste vevrsie met sessie eigenschappen
+| * 65c148f was collinnl, 25 hours ago, message: Fixes maar nog steeds de selecteren bug
+* |   2ab40c7 was CollinNL, 27 hours ago, message: Merge pull request #17 from RoyAdmiraal/c11
+|\ \  
+| |/  
+| * 574c483 was collinnl, 27 hours ago, message: Kleine fixes speelveld en todo
+| * 77f26fe was collinnl, 27 hours ago, message: Nieuwe versie speelveld inc kaarten veel gedaan aan de manier waarop alles op het veld komt
+| * cac9bea was collinnl, 31 hours ago, message: Verder met kaart opleggen onderdeel
+|/  
+* cc1c6f4 was collinnl, 2 days ago, message: app weer volledig
+* 1249b86 was collinnl, 2 days ago, message: Resultaten aangepast vooral style
+* 30b3eeb was CollinNL, 2 days ago, message: php resultaten nu werkent met correcte sql en wat stijl aanpassingen
+* 5056f93 was CollinNL, 3 days ago, message: Laatste versie database
+* 6ca94d0 was CollinNL, 3 days ago, message: Laatste versie database
+*   3cea60e was CollinNL, 3 days ago, message: Merge pull request #12 from RoyAdmiraal/c6
+|\  
+| * 2860ee3 was collinnl, 3 days ago, message: Verder met de resultaten en php incl sql files aan git toegevoegd.
+* |   22ff1f0 was CollinNL, 6 days ago, message: Merge pull request #11 from RoyAdmiraal/c6
+|\ \  
+| |/  
+| * eb080ff was collinnl, 6 days ago, message: Resultaten geupdate, php connectie is ook gelukt nu alleen nog de koppeling met de app en de resultaat namen kunnen opgehaald worden. (hierna verder uitbouwen met de rondes inc taken)
+|/  
+*   4eec2a0 was CollinNL, 6 days ago, message: Merge pull request #9 from RoyAdmiraal/m3
+|\  
+| * 6112c33 was Marius Stolp, 6 days ago, message: help_activity.xml en strings.xml bijgewerkt, geeft nog wel foutmelding (zie comment in HelpActivity class)
+| *   4fd64d6 was CollinNL, 7 days ago, message: Merge pull request #6 from RoyAdmiraal/dev
+| |\  
+* | \   ec23559 was CollinNL, 6 days ago, message: Merge pull request #10 from RoyAdmiraal/c5
+|\ \ \  
+| * | | ee569ee was collinnl, 6 days ago, message: Resultaten scherm gemaakt met tabs werkend(10st)
+* | | |   d3782cf was CollinNL, 6 days ago, message: Merge pull request #8 from RoyAdmiraal/r4
+|\ \ \ \  
+| |/ / /  
+|/| | |   
+| * | | 0412e9c was RoyAdmiraal, 6 days ago, message: Aanpassing speelveld plus 0pointer
+* | | |   2cbd42a was CollinNL, 6 days ago, message: Merge pull request #7 from RoyAdmiraal/r4
+|\ \ \ \  
+| |/ / /  
+| | | /   
+| |_|/    
+|/| |     
+| * | 4c8895e was RoyAdmiraal, 6 days ago, message: Aanpassing speelveld
+|/ /  
+* |   21056f9 was collinnl, 7 days ago, message: App werkt weer
+|\ \  
+| * \   2b6bd4c was CollinNL, 7 days ago, message: Merge pull request #4 from RoyAdmiraal/c3
+| |\ \  
+| | * | d330194 was collinnl, 7 days ago, message: update collin
+| | * | 5d7fa8b was collinnl, 7 days ago, message: update collin
+| * | |   a6793eb was CollinNL, 7 days ago, message: Merge pull request #3 from RoyAdmiraal/r3
+| |\ \ \  
+| | |/ /  
+| |/| |   
+| | * | 1e5e96a was RoyAdmiraal, 7 days ago, message: uitbereiding speelveld
+| |/ /  
+* | |   fa8a3d0 was collinnl, 7 days ago, message: Merge branch 'm1' into dev
+|\ \ \  
+| |/ /  
+|/| |   
+| * |   d283848 was collinnl, 7 days ago, message: merge conflicts resolved
+| |\ \  
+| |/ /  
+|/| |   
+* | |   e4d97c1 was collinnl, 9 days ago, message: fix
+|\ \ \  
+| * | | ea65804 was collinnl, 9 days ago, message: hotfix
+| * | | 51565ea was collinnl, 9 days ago, message: dev
+| | |/  
+| |/|   
+* | |   c8d4320 was CollinNL, 9 days ago, message: Merge pull request #1 from RoyAdmiraal/c1
+|\ \ \  
+| |/ /  
+|/| |   
+| * | 07594d6 was collin_woerde hotmail.com, 9 days ago, message: Git test collin
+|/ /  
+* | ee47702 was RoyAdmiraal, 13 days ago, message: aanpassing style
+* | da5b706 was RoyAdmiraal, 2 weeks ago, message: style
+| * 87e6e05 was Marius Stolp, 7 days ago, message: Wijzigingen Marius
+|/  
+* 052c3ed was CollinNL, 2 weeks ago, message: Activity button fix
+* d462131 was CollinNL, 2 weeks ago, message: Verbeteringen (hint)
+* 9c3ca8f was RoyAdmiraal, 2 weeks ago, message: sessieeigenschappen werkend
+* 18f7f81 was RoyAdmiraal, 2 weeks ago, message: sessie eigenschappenscherm
+* 579ff3b was CollinNL, 2 weeks ago, message: Added functionality for the 3 activities
+* a22dadc was CollinNL, 2 weeks ago, message: Added 3 activities
+* f8d451b was CollinNL, 2 weeks ago, message: Main update
+* c269268 was CollinNL, 2 weeks ago, message: Help option added
+* fc60501 was CollinNL, 2 weeks ago, message: remove test
+*   e82b688 was RoyAdmiraal, 3 weeks ago, message: test
+|\  
+| * 38ca522 was CollinNL, 3 weeks ago, message: gitignore toevoegen
+| * e133685 was CollinNL, 3 weeks ago, message: eerste bestand
+* 6e99b4c was RoyAdmiraal, 3 weeks ago, message: begin app
