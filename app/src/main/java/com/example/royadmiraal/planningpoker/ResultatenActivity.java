@@ -55,9 +55,8 @@ public class ResultatenActivity extends AppCompatActivity {
 
         requestQueue = Volley.newRequestQueue(getApplicationContext());
 
-
         setGebruikerId(1);
-        setResults();
+        getResults();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultaten);
@@ -71,17 +70,10 @@ public class ResultatenActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
-
-
     }
 
     private void setGebruikerId(int id) {
         this.gebruikerId = id;
-    }
-
-    private void setResults() {
-        //getResults();
-        getTest();
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -108,15 +100,11 @@ public class ResultatenActivity extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-
-
                     JSONArray sessies = response.getJSONArray("sessies");
-                    Log.d("Log data: SessieId", "emv orimoierm");
+
                     for (int i = 0; i < sessies.length(); i++) {
                         JSONObject sessie = sessies.getJSONObject(i);
                         String sessieId = sessie.getString("gbr_sessie_sessie_id");
-
-                        Log.d("Log data: SessieId", sessieId);
                     }
 
                 } catch (Exception e) {
@@ -162,7 +150,7 @@ public class ResultatenActivity extends AppCompatActivity {
             }
         });
 
-        Log.d("Is deze NULL ??? "," Ermm .. Dus : "+requestQueue);
+        Log.d("Is deze NULL ??? ", " Ermm .. Dus : " + requestQueue);
         requestQueue.add(jsonObjectRequest);
     }
 
