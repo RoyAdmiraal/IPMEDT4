@@ -1,7 +1,6 @@
 package com.example.royadmiraal.planningpoker;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,7 +12,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class SpeelveldActivity extends AppCompatActivity {
+public class SpeelveldScrummasterActivity extends AppCompatActivity {
     private static final String DEFAULT = "n/a";
     private String[] deelneemGegevens = {"naam", "Sessie id"};
     public boolean toonKaarten = true; //TODO op true door scrum master of als de timer is afgelopen
@@ -48,7 +47,7 @@ public class SpeelveldActivity extends AppCompatActivity {
     }
 
     public void opleggen(View view) {
-        kaartenLijstSpelers[1] = selectedCard;
+        kaartenLijstSpelers[0] = selectedCard;
         toonSpeelveld();
     }
 
@@ -80,7 +79,7 @@ public class SpeelveldActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_speelveld);
+        setContentView(R.layout.activity_speelveld_scrummaster);
         //Intent intent = getIntent();
         //deelneemGegevens = intent.getStringArrayExtra("strings");
         //spelerLijst[1] = deelneemGegevens[0];

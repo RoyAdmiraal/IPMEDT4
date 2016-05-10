@@ -27,6 +27,7 @@
         android:layout_marginTop="50dp"
         android:hint="Beschrijving van de taak" />
 
+
     <Button
         style="@style/Button"
         android:layout_width="wrap_content"

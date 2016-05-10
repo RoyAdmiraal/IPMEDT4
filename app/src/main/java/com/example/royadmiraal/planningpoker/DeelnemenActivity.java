@@ -8,13 +8,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 
 public class DeelnemenActivity extends AppCompatActivity{
 
 
-
-
+    private RequestQueue requestQueue;
+    private String getResultatenUrl = "http://collinwoerde.nl/ipmedt4/getResultaten.php";
+    private Object results;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +32,69 @@ public class DeelnemenActivity extends AppCompatActivity{
 
 
     }
+
+    public Object getResults() {
+        Log.d("Log data: SessieId", "test");
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, getResultatenUrl, (String) null, new Response.Listener<JSONObject>() {
+
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray sessies = response.getJSONArray("sessies");
+
+                    for (int i = 0; i < sessies.length(); i++) {
+                        JSONObject sessie = sessies.getJSONObject(i);
+                        String sessieId = sessie.getString("gbr_sessie_sessie_id");
+                    }
+
+                } catch (Exception e) {
+
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("Log data: ", error.toString());
+            }
+        });
+        requestQueue.add(jsonObjectRequest);
+
+
+        return results;
+    }
+
+    public void getTest() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, getResultatenUrl, (String) null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray sessies = response.getJSONArray("sessies");
+
+                    for (int i = 0; i < sessies.length(); i++) {
+                        JSONObject sessie = sessies.getJSONObject(i);
+
+                        String sessieId = sessie.getString("gbr_sessie_sessie_id");
+
+                        Log.d("Log data: ", sessieId);
+                    }
+                } catch (Exception e) {
+
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("Log data: ", error.toString());
+            }
+        });
+
+        Log.d("Is deze NULL ??? ", " Ermm .. Dus : " + requestQueue);
+        requestQueue.add(jsonObjectRequest);
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
