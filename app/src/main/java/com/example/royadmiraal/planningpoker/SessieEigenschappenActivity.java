@@ -4,12 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
-
-import com.example.royadmiraal.planningpoker.models.Sessie;
 
 
 public class SessieEigenschappenActivity extends AppCompatActivity {
@@ -57,7 +53,7 @@ public class SessieEigenschappenActivity extends AppCompatActivity {
 
     public void doorgaanSpeelveld (View view){
 
-        Intent intent = new Intent(SessieEigenschappenActivity.this, SpeelveldActivity.class);
+        Intent intent = new Intent(SessieEigenschappenActivity.this, SpeelveldScrummasterActivity.class);
         startActivity(intent);
 
     }

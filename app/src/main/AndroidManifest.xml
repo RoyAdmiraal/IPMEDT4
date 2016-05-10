@@ -46,6 +46,10 @@
             android:label="@string/title_activity_deelnemenSpeelveld"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".SpeelveldScrummasterActivity"
+            android:label="@string/title_activity_deelnemenSpeelveld"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".TaakToevoegenActivity"
             android:screenOrientation="portrait" />
     </application>
