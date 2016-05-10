@@ -20,7 +20,7 @@ import com.example.royadmiraal.planningpoker.models.Gebruiker;
 public class MainActivity extends AppCompatActivity {
     private static final String DEFAULT = "N/A";
     TextView welkom;
-    Gebruiker gebruiker = new Gebruiker();
+    static Gebruiker gebruiker = new Gebruiker();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,9 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void opslaanGebruikerDatabase() {
-
-
-        gebruiker.setId(0);
+        gebruiker.setId(1);
     }
 
     private void ophalenNaam() {
