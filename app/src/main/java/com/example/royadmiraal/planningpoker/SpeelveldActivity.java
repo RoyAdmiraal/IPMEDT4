@@ -128,7 +128,7 @@ public class SpeelveldActivity extends AppCompatActivity {
 
         TextView huidigeKaartNaam = (TextView) findViewById(R.id.huidigeKaart);
        // huidigeKaartNaam.findViewById(R.id.huidigeKaart);
-        huidigeKaartNaam.setText((selectedCard +1) + " van de 14");
+        huidigeKaartNaam.setText((selectedCard +1) + "/14");
 
     }
 
