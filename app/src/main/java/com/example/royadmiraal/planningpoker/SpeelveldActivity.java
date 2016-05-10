@@ -16,7 +16,7 @@ import android.widget.TextView;
 public class SpeelveldActivity extends AppCompatActivity {
     private static final String DEFAULT = "n/a";
     private String[] deelneemGegevens = {"naam", "Sessie id"};
-    public boolean toonKaarten = false; //TODO op true door scrum master of als de timer is afgelopen
+    public boolean toonKaarten = true; //TODO op true door scrum master of als de timer is afgelopen
     private String[] spelerLijst = {"S.M. hier", "Speler 2", "Speler 3", "Speler 4", "Speler 5", "Speler 6", "Speler 7", "Speler 8"};
     private int[] tempKaartenLijstSpelers = {14, 14, 14, 14, 14, 14, 14, 14};
     private int[] kaartenLijstSpelers = {14, 14, 14, 14, 14, 14, 14, 14};

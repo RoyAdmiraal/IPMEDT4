@@ -15,6 +15,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.royadmiraal.planningpoker.fragments.EightFragment;
 import com.example.royadmiraal.planningpoker.fragments.FiveFragment;
 import com.example.royadmiraal.planningpoker.fragments.FourFragment;
@@ -35,7 +36,7 @@ import java.util.List;
 public class ResultatenActivity extends AppCompatActivity {
 
     private RequestQueue requestQueue;
-    private String getResultatenUrl = "http://collinwoerde.nl/ipmedt/getResultaten.php";
+    private String getResultatenUrl = "http://collinwoerde.nl/ipmedt4/getResultaten.php";
 
 
     private int gebruikerId;
@@ -51,6 +52,10 @@ public class ResultatenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        requestQueue = Volley.newRequestQueue(getApplicationContext());
+
+
         setGebruikerId(1);
         setResults();
 
@@ -66,6 +71,8 @@ public class ResultatenActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+
     }
 
     private void setGebruikerId(int id) {
@@ -74,6 +81,7 @@ public class ResultatenActivity extends AppCompatActivity {
 
     private void setResults() {
         //getResults();
+        getTest();
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -96,13 +104,14 @@ public class ResultatenActivity extends AppCompatActivity {
     public Object getResults() {
         Log.d("Log data: SessieId", "test");
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, getResultatenUrl, (String) null, new Response.Listener<JSONObject>() {
+
             @Override
             public void onResponse(JSONObject response) {
                 try {
 
 
                     JSONArray sessies = response.getJSONArray("sessies");
-
+                    Log.d("Log data: SessieId", "emv orimoierm");
                     for (int i = 0; i < sessies.length(); i++) {
                         JSONObject sessie = sessies.getJSONObject(i);
                         String sessieId = sessie.getString("gbr_sessie_sessie_id");
@@ -125,6 +134,36 @@ public class ResultatenActivity extends AppCompatActivity {
 
 
         return results;
+    }
+
+    public void getTest() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, getResultatenUrl, (String) null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray sessies = response.getJSONArray("sessies");
+
+                    for (int i = 0; i < sessies.length(); i++) {
+                        JSONObject sessie = sessies.getJSONObject(i);
+
+                        String sessieId = sessie.getString("gbr_sessie_sessie_id");
+
+                        Log.d("Log data: ", sessieId);
+                    }
+                } catch (Exception e) {
+
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("Log data: ", error.toString());
+            }
+        });
+
+        Log.d("Is deze NULL ??? "," Ermm .. Dus : "+requestQueue);
+        requestQueue.add(jsonObjectRequest);
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
