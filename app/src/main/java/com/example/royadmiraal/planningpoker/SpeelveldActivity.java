@@ -13,13 +13,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/**
- * Created by IPMEDT4 - Groep A on 04-04-16.
- */
-
-//TODO namen en kaarten in en uit database
-
-
 public class SpeelveldActivity extends AppCompatActivity {
     private static final String DEFAULT = "n/a";
     private String[] deelneemGegevens = {"naam", "Sessie id"};
@@ -36,8 +29,8 @@ public class SpeelveldActivity extends AppCompatActivity {
         Log.d("log data: ", "ophalen naam");
         SharedPreferences sharedPreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
         String name = sharedPreferences.getString("gebruiker_naam", DEFAULT);
-            Log.d("log data: ", name);
-            spelerLijst[1] = name;
+        Log.d("log data: ", name);
+        spelerLijst[1] = name;
     }
 
     private void getKaartenDatabase() {
@@ -46,9 +39,9 @@ public class SpeelveldActivity extends AppCompatActivity {
         Log.d("Log data: ", "haalt nu op uit db");
 
 
-            //for (int i = 0; i < kaartenLijstSpelers.length; i++) {
-            //    kaartenLijstSpelers[i] = kaartenLijstSpelers[i]; //TODO de Json array in kaartenlijst zetten (dit ook elke 5 sec aanroepen)
-            //}
+        //for (int i = 0; i < kaartenLijstSpelers.length; i++) {
+        //    kaartenLijstSpelers[i] = kaartenLijstSpelers[i]; //TODO de Json array in kaartenlijst zetten (dit ook elke 5 sec aanroepen)
+        //}
 
 
         toonSpeelveld();
@@ -111,7 +104,7 @@ public class SpeelveldActivity extends AppCompatActivity {
             public void onPageSelected(int cardNumber) {
                 selectedCard = cardNumber;
 
-            huidigeKaart();
+                huidigeKaart();
             }
 
 
@@ -127,8 +120,8 @@ public class SpeelveldActivity extends AppCompatActivity {
     private void huidigeKaart() {
 
         TextView huidigeKaartNaam = (TextView) findViewById(R.id.huidigeKaart);
-       // huidigeKaartNaam.findViewById(R.id.huidigeKaart);
-        huidigeKaartNaam.setText((selectedCard +1) + "/14");
+        // huidigeKaartNaam.findViewById(R.id.huidigeKaart);
+        huidigeKaartNaam.setText((selectedCard + 1) + "/14");
 
     }
 

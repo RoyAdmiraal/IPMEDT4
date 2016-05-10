@@ -44,8 +44,8 @@ function getSessies($gebruikerId) {
     $sessies = array_column($temp_sessies, 'gbr_sessie_sessie_id');
 
     // Array bekijken voor het testen
-    //print_r($sessies);
-    //header('Content-Type: application/json');
+    // print_r($sessies);
+    // header('Content-Type: application/json');
     echo json_encode(array("sessies" => $temp_sessies));
 }
 
@@ -54,6 +54,7 @@ function getResultaten() {
 
     foreach ($sessies as $sessie) {
         echo "\n";
+		//echo $sessie;
         getSessieResultaat($sessie);
     }
 }

@@ -94,6 +94,7 @@ public class ResultatenActivity extends AppCompatActivity {
     }
 
     public Object getResults() {
+        Log.d("Log data: SessieId", "test");
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, getResultatenUrl, (String) null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -108,9 +109,6 @@ public class ResultatenActivity extends AppCompatActivity {
 
                         Log.d("Log data: SessieId", sessieId);
                     }
-
-
-
 
                 } catch (Exception e) {
 
